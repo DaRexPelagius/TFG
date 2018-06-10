@@ -45,6 +45,8 @@ def simulacion(modelo, tipo_grafo, tam_grafo=10000, hub=0, infectados=1, suscept
     """ Si hub = 0, la epidemia empieza un nodo aleatorio, si hub = 1 empieza en el nodo de mayor grado,
     si hub = 2, entonces empieza en un nodo de menor grado."""
     results = []
+    if susceptibles == 10000:
+        susceptibles = tam_grafo
     for i in xrange(runs):
         current_run = []
 
@@ -54,19 +56,9 @@ def simulacion(modelo, tipo_grafo, tam_grafo=10000, hub=0, infectados=1, suscept
 
         if susceptibles != tam_grafo:
             s = random.sample(range(grafo.vcount()), susceptibles)
+            model.compartimentos.move_vertices(s, "S")
         ## Infectamos el numero de nodos indicado
-        if hub == 0:
-            infectados = random.sample(range(grafo.vcount()), infectados)
-        elif hub == 1:
-            ## Buscamos el nodo de mayor grado
-            infectados = list()
-            infectados.append(grafo.vs.select(_degree = grafo.maxdegree())[0].index)
-        elif hub == 2:
-            ## Buscamos un nodo de grado 4 lo cual es bastante bajo
-            infectados = list()
-            infectados.append(grafo.vs.select(_degree = 4)[0].index)
-
-
+        infectados = random.sample(range(grafo.vcount()), infectados)
         model.compartimentos.move_vertices(infectados, "I")
 
         ## realizamos los pasos
@@ -77,6 +69,92 @@ def simulacion(modelo, tipo_grafo, tam_grafo=10000, hub=0, infectados=1, suscept
 
         results.append(current_run)
         return results
+
+def simulacionInteligente(modelo, tipo_grafo, tam_grafo=10000, hub=0, infectados=1, susceptibles = 10000, runs=10, time=100, *args, **kwds):
+
+    results = []
+    for i in xrange(runs):
+        current_run = []
+
+        ## Inicializamos grafo y modelo
+        grafo = generaGrafo(tipo_grafo, n = tam_grafo)
+        model = modelo(grafo, *args, **kwds)
+
+        if susceptibles != tam_grafo:
+            s = random.sample(range(grafo.vcount()), susceptibles)
+            model.compartimentos.move_vertices(s, "S")
+        ## Infectamos el numero de nodos indicado
+        infectados = random.sample(range(grafo.vcount()), infectados)
+        model.compartimentos.move_vertices(infectados, "I")
+
+        ## realizamos los pasos
+        for t in xrange(time):
+            if t <= 5:
+                model.stepInteligente()
+            else:
+                model.step()
+            p_infectados = model.compartimentos.tam_relativo("I")
+            current_run.append(p_infectados)
+
+        results.append(current_run)
+        return results
+
+    def simulacionInteligente(modelo, tipo_grafo, tam_grafo=10000, hub=0, infectados=1, susceptibles=10000, runs=10,
+                              time=100, *args, **kwds):
+
+        results = []
+        for i in xrange(runs):
+            current_run = []
+
+            ## Inicializamos grafo y modelo
+            grafo = generaGrafo(tipo_grafo, n=tam_grafo)
+            model = modelo(grafo, *args, **kwds)
+
+            if susceptibles != tam_grafo:
+                s = random.sample(range(grafo.vcount()), susceptibles)
+                model.compartimentos.move_vertices(s, "S")
+            ## Infectamos el numero de nodos indicado
+            infectados = random.sample(range(grafo.vcount()), infectados)
+            model.compartimentos.move_vertices(infectados, "I")
+
+            ## realizamos los pasos
+            for t in xrange(time):
+                model.stepInteligente2()
+                p_infectados = model.compartimentos.tam_relativo("I")
+                current_run.append(p_infectados)
+
+            results.append(current_run)
+            return results
+
+
+def simulacionInteligente2(modelo, tipo_grafo, tam_grafo=10000, hub=0, infectados=1, susceptibles = 10000, runs=10, time=100, *args, **kwds):
+    results = []
+    if susceptibles == 10000:
+        susceptibles = tam_grafo
+    for i in xrange(runs):
+        current_run = []
+
+        ## Inicializamos grafo y modelo
+        grafo = generaGrafo(tipo_grafo, n = tam_grafo)
+        model = modelo(grafo, *args, **kwds)
+
+        if susceptibles != tam_grafo:
+            s = random.sample(range(grafo.vcount()), susceptibles)
+            model.compartimentos.move_vertices(s, "S")
+        ## Infectamos el numero de nodos indicado
+        infectados = random.sample(range(grafo.vcount()), infectados)
+        model.compartimentos.move_vertices(infectados, "I")
+
+        ## realizamos los pasos
+        for t in xrange(time):
+            model.stepInteligente2()
+            p_infectados = model.compartimentos.tam_relativo("I")
+            current_run.append(p_infectados)
+
+        results.append(current_run)
+        return results
+
+
 
 def plot_results(results, color):
 	for r in results:

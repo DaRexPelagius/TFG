@@ -10,8 +10,8 @@ import matplotlib.pyplot as plt
 tam = 100000
 resultados = []
 
-resultados.append(simulacion(ModeloSIS, "Scale_Free", tam_grafo=tam, susceptibles=tam, hub=2, time=100, beta=0.25, gamma=0.1))
-resultados.append(simulacion(ModeloSIS, "Scale_Free", tam_grafo=tam, susceptibles=tam, hub=1, time=100, beta=0.25, gamma=0.1))
+resultados.append(simulacion(ModeloSIS, "Scale_Free", tam_grafo=tam, susceptibles=tam, hub=2, time=100, beta=0.025, gamma=0.01))
+resultados.append(simulacion(ModeloSIS, "Scale_Free", tam_grafo=tam, susceptibles=tam, hub=1, time=100, beta=0.025, gamma=0.01))
 
 tiempo = range(100)
 averaged = [mean(items) for items in izip(*resultados[0])]
@@ -21,4 +21,4 @@ plt.plot(tiempo, averaged, 'r', label='Infeccion iniciada en un hub')
 plt.plot(tiempo, averaged2, 'b', label='Infeccion no iniciada en un hub')
 plt.legend(title="Hubs vs nodos normales")
 plt.title("Proporcion de infectados a lo largo de 100u de tiempo.")
-plt.show()
+plt.savefig('simulacion2.png')
