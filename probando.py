@@ -2,10 +2,10 @@
 # -*- coding: latin-1 -*-
 
 import codigo
-import Compartments
-from SISModel import SISModel
-from SIRModel import SIRModel
-from SIRSModel import SIRSModel
+import Compartimentos
+from ModeloSIS import ModeloSIS
+from ModeloSIR import ModeloSIR
+from ModeloSIRS import ModeloSIRS
 import igraph
 from igraph import *
 import random
@@ -42,7 +42,7 @@ def simulate(model_class, runs=10, time=100, *args, **kwds):
         return results
 
 
-results = simulate(SISModel, beta=0.25, gamma=0.25)
+results = simulate(ModeloSIS, beta=0.25, gamma=0.25)
 
 def plot_results(results, color):
     ## Calculate the means for each time point

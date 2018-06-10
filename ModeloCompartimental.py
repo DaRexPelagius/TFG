@@ -1,22 +1,22 @@
-from Compartments import Compartments
+from Compartimentos import Compartimentos
 
-class CompartmentalModel(object):
-    """Abstract base class for compartmental epidemic
-    models."""
+class ModeloCompartimental(object):
+    """Interfaz para la clase de los modelos
+    epidemiologicos compartimentales."""
 
-    def __init__(self, graph, codes):
-        """Creates a compartmental model associated to the given
-        'graph'. 'codes' is a list that provides the comparment
-        codes of the model."""
-        self.graph = graph
-        self.compartments = Compartments(graph, codes)
+    def __init__(self, grafo, codes):
+        """Inicializa un.modelo compartimental sobre un
+        grafo que recibe como argumento y el codigo
+        asociado a los compartimentos"""
+        self.grafo = grafo
+        self.compartimentos = Compartimentos(grafo, codes)
         self.reset()
 
-    def relative_compartment_sizes(self):
+    def tam_relativo_compartimentos(self):
         """Returns the relative sizes of each comparment in the
         model."""
-        return [self.compartments.relative_size(code)
-                for code in self.comparments.codes]
+        return [self.compartimentos.tam_relativo(cmp)
+                for cmp in self.compartimentos.cmps]
 
     def reset(self):
         """Resets the compartments to an initial state. This
