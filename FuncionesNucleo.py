@@ -32,7 +32,7 @@ def generaGrafo(tipo, n=10000, conectado=True):
         # dim = dimensiones del lattice, size = tamanyo de todas las dimensiones
         # nei = distancia a la que dos vertices estan conectados
         # p = rewiring probability
-        grafo = Graph.Watts_Strogatz(1, 100, 2, 0.25)
+        grafo = Graph.Watts_Strogatz(1, n, 2, 0.25)
     else:
         raise ValueError("No soportamos ese tipo de grafo.")
 
