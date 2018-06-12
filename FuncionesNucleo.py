@@ -2,7 +2,7 @@ import random
 from igraph import *
 import pylab
 
-def generaGrafo(tipo, n=10000, conectado=True):
+def generaGrafo(tipo, n=10000, conectado=True, p = 0.25):
     if tipo == "Erdos_Renyi":
         # Erdos_Renyi(n, p, m, directed=False, loops=False)
         # n = n vertices, p = probabilidad de aristas (si hay p, no hay m)
@@ -32,7 +32,7 @@ def generaGrafo(tipo, n=10000, conectado=True):
         # dim = dimensiones del lattice, size = tamanyo de todas las dimensiones
         # nei = distancia a la que dos vertices estan conectados
         # p = rewiring probability
-        grafo = Graph.Watts_Strogatz(1, n, 2, 0.25)
+        grafo = Graph.Watts_Strogatz(1, n, 2, p)
     else:
         raise ValueError("No soportamos ese tipo de grafo.")
 
