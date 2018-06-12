@@ -2,6 +2,28 @@
 # # -*- coding: latin-1 -*-
 from igraph import *
 import random
+import numpy as np
+
+def ajustarTamanyo(grafo):
+    grados = sorted(grafo.degree())
+    mayor = round(np.percentile(grados, 75))
+    media = round(np.percentile(grados, 50))
+    menor = round(np.percentile(grados, 25))
+
+    for v in VertexSeq(g1):
+        if v.degree() > mayor:
+            v['color'] = 'cyan'
+            v['size'] = 60
+        elif v.degree() > media:
+            v['color'] = 'yellow'
+            v['size'] = 40
+        elif v.degree() > menor:
+            v['color'] = 'green'
+            v['size'] = 25
+        else:
+            v['color'] = 'red'
+            v['size'] = 15
+
 
 ## Creamos grafo de anillo base.
 g1 = Graph.Ring(50)
@@ -24,7 +46,7 @@ g1.add_edge('49', '1')
 g1.add_edge('50', '2')
 
 layout = g1.layout_circle
-plot(g1, "imagen1.png")
+plot(g1, "imagen1sw.png", vertex_label = g1.degree())
 #plot.show()
 
 ## Aplicamos el proceso de rewire con probabilidad p
@@ -42,7 +64,8 @@ for v in VertexSeq(g1):
             aleatorio = int(round(random.uniform(0, 20), 0))
         g1.add_edge(v.index, aleatorio)
 
-plot(g1, "imagen2.png")
+ajustarTamanyo(g1)
+plot(g1, "imagen2sw.png", vertex_label = g1.degree())
 
 ## Aplicamos otra ronda
 for v in VertexSeq(g1):
@@ -59,4 +82,8 @@ for v in VertexSeq(g1):
             aleatorio = int(round(random.uniform(0, 20), 0))
         g1.add_edge(v.index, aleatorio)
 
-plot(g1, "imagen3.png")
+ajustarTamanyo(g1)
+plot(g1, "imagen3sw.png", vertex_label = g1.degree())
+
+
+plot(g1, vertex_label = g1.degree() )
