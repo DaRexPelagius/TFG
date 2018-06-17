@@ -1,0 +1,6 @@
+pip install python-igraph
+build-essential
+python-dev
+matplotlib
+NumPy
+random
