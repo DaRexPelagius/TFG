@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XMI verified="false" xmlns:UML="http://schema.omg.org/spec/UML/1.4" timestamp="2018-06-17T19:44:05" xmi.version="1.2">
+ <XMI.header>
+  <XMI.documentation>
+   <XMI.exporter>umbrello uml modeller http://umbrello.kde.org</XMI.exporter>
+   <XMI.exporterVersion>1.6.13</XMI.exporterVersion>
+   <XMI.exporterEncoding>UnicodeUTF8</XMI.exporterEncoding>
+  </XMI.documentation>
+  <XMI.metamodel href="UML.xml" xmi.name="UML" xmi.version="1.4"/>
+ </XMI.header>
+ <XMI.content>
+  <UML:Model isRoot="false" isSpecification="false" isLeaf="false" xmi.id="m1" isAbstract="false" name="Modelo UML">
+   <UML:Namespace.ownedElement>
+    <UML:Stereotype isRoot="false" isSpecification="false" isLeaf="false" xmi.id="folder" isAbstract="false" visibility="public" name="TFG" namespace="m1"/>
+    <UML:Model isRoot="false" isSpecification="false" isLeaf="false" xmi.id="Logical_View" isAbstract="false" visibility="public" name="Logical View" namespace="m1">
+     <UML:Namespace.ownedElement>
+      <UML:Package isRoot="false" isSpecification="false" stereotype="folder" isLeaf="false" xmi.id="Datatypes" isAbstract="false" visibility="public" name="Datatypes" namespace="Logical_View">
+       <UML:Namespace.ownedElement>
+        <UML:DataType isRoot="false" isSpecification="false" isLeaf="false" xmi.id="udwIg4NC9rPZj" isAbstract="false" visibility="public" name="char" namespace="Datatypes"/>
+        <UML:DataType isRoot="false" isSpecification="false" isLeaf="false" xmi.id="uaiDWVykStjZ9" isAbstract="false" visibility="public" name="int" namespace="Datatypes"/>
+        <UML:DataType isRoot="false" isSpecification="false" isLeaf="false" xmi.id="ulaJZvpTtKLEH" isAbstract="false" visibility="public" name="float" namespace="Datatypes"/>
+        <UML:DataType isRoot="false" isSpecification="false" isLeaf="false" xmi.id="u0GPy9ZeGeHGd" isAbstract="false" visibility="public" name="double" namespace="Datatypes"/>
+        <UML:DataType isRoot="false" isSpecification="false" isLeaf="false" xmi.id="uBjJZBvS8of9J" isAbstract="false" visibility="public" name="bool" namespace="Datatypes"/>
+        <UML:DataType isRoot="false" isSpecification="false" isLeaf="false" xmi.id="updGpUssomfPP" isAbstract="false" visibility="public" name="string" namespace="Datatypes"/>
+        <UML:DataType isRoot="false" isSpecification="false" isLeaf="false" xmi.id="u54fqA7KakYle" isAbstract="false" visibility="public" name="unsigned char" namespace="Datatypes"/>
+        <UML:DataType isRoot="false" isSpecification="false" isLeaf="false" xmi.id="uOnID1msN5xiY" isAbstract="false" visibility="public" name="signed char" namespace="Datatypes"/>
+        <UML:DataType isRoot="false" isSpecification="false" isLeaf="false" xmi.id="u50988D6zrZUg" isAbstract="false" visibility="public" name="unsigned int" namespace="Datatypes"/>
+        <UML:DataType isRoot="false" isSpecification="false" isLeaf="false" xmi.id="u5051IYZZSmCl" isAbstract="false" visibility="public" name="signed int" namespace="Datatypes"/>
+        <UML:DataType isRoot="false" isSpecification="false" isLeaf="false" xmi.id="uxxxNvtYllPd1" isAbstract="false" visibility="public" name="short int" namespace="Datatypes"/>
+        <UML:DataType isRoot="false" isSpecification="false" isLeaf="false" xmi.id="uP3QZEoolNecZ" isAbstract="false" visibility="public" name="unsigned short int" namespace="Datatypes"/>
+        <UML:DataType isRoot="false" isSpecification="false" isLeaf="false" xmi.id="uZ0craOSwOfqU" isAbstract="false" visibility="public" name="signed short int" namespace="Datatypes"/>
+        <UML:DataType isRoot="false" isSpecification="false" isLeaf="false" xmi.id="u3zbBzeRjPOJS" isAbstract="false" visibility="public" name="long int" namespace="Datatypes"/>
+        <UML:DataType isRoot="false" isSpecification="false" isLeaf="false" xmi.id="uKxosYvqYvnhX" isAbstract="false" visibility="public" name="signed long int" namespace="Datatypes"/>
+        <UML:DataType isRoot="false" isSpecification="false" isLeaf="false" xmi.id="urTaHQqwoFkd0" isAbstract="false" visibility="public" name="unsigned long int" namespace="Datatypes"/>
+        <UML:DataType isRoot="false" isSpecification="false" isLeaf="false" xmi.id="uNoc17Nb1LlHz" isAbstract="false" visibility="public" name="long double" namespace="Datatypes"/>
+        <UML:DataType isRoot="false" isSpecification="false" isLeaf="false" xmi.id="u65wUbl9bO0FL" isAbstract="false" visibility="public" name="wchar_t" namespace="Datatypes"/>
+        <UML:DataType isRoot="false" isSpecification="false" isLeaf="false" xmi.id="utbFpbz3VMjLX" isAbstract="false" visibility="public" name="array" namespace="Datatypes"/>
+        <UML:DataType isRoot="false" isSpecification="false" isLeaf="false" xmi.id="upCJJnHLN7xuD" isAbstract="false" visibility="public" name="tuple" namespace="Datatypes"/>
+        <UML:DataType isRoot="false" isSpecification="false" isLeaf="false" xmi.id="uZvfd4Ae88e7Q" isAbstract="false" visibility="public" name="list" namespace="Datatypes"/>
+        <UML:DataType isRoot="false" isSpecification="false" isLeaf="false" xmi.id="uyLQYXGTGaZZ8" isAbstract="false" visibility="public" name="long" namespace="Datatypes"/>
+        <UML:DataType isRoot="false" isSpecification="false" isLeaf="false" xmi.id="u9n701tnvPSPc" isAbstract="false" visibility="public" name="dict" namespace="Datatypes"/>
+        <UML:DataType isRoot="false" isSpecification="false" isLeaf="false" xmi.id="u2gDZPelq6igu" isAbstract="false" visibility="public" name="object" namespace="Datatypes"/>
+        <UML:DataType isRoot="false" isSpecification="false" isLeaf="false" xmi.id="uaEGvL2IqZd3k" isAbstract="false" visibility="public" name="set" namespace="Datatypes"/>
+       </UML:Namespace.ownedElement>
+      </UML:Package>
+      <UML:Class isRoot="false" isSpecification="false" isLeaf="false" xmi.id="uFehINvz1tvAZ" isAbstract="false" visibility="public" name="algoritmoBarabasi" namespace="Logical_View">
+       <UML:GeneralizableElement.generalization>
+        <UML:Generalization xmi.idref="uyDNiMeeTz2bS"/>
+       </UML:GeneralizableElement.generalization>
+       <UML:Classifier.feature>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="uMnw8hlz0paIg" isOverride="false" isAbstract="false" visibility="public" name="main" comment="# Vamos a ejemplificar como nace una# red scale free. Para ello supondremos# que los nodos con grado superior al grado# medio tienen una probabilidad d">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="uFUjRJJKLzYG8" kind="return" type="updGpUssomfPP"/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="ubNiIfAqFIcCo" isOverride="false" isAbstract="false" visibility="public" name="preferalAttachment" comment="# Empezamos calculando los cuatro percentiles# Preparamos la distribucion de probabilidad# Escogemos un nodo aleatorio distinto del nuevo# Evitamos los bucles# Comprobamos que no hay ejes repetidos# A�adimos el eje">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="ud8UrCDdqKGk6" kind="return" type="updGpUssomfPP"/>
+          <UML:Parameter isSpecification="false" xmi.id="uaYxB6d3x7RGp" visibility="private" name="grafo" type="updGpUssomfPP" value=""/>
+          <UML:Parameter isSpecification="false" xmi.id="uSTTk7FrG9Fhh" visibility="private" name="nodo" type="updGpUssomfPP" value=""/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="uMn9Yq09foQAb" isOverride="false" isAbstract="false" visibility="public" name="ajustarTamanyo" comment="# Ejecutamos el algoritmo">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="uEi160qowoGS1" kind="return" type="updGpUssomfPP"/>
+          <UML:Parameter isSpecification="false" xmi.id="uqVy8V0OtH8oj" visibility="private" name="grafo" type="updGpUssomfPP" value=""/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+       </UML:Classifier.feature>
+      </UML:Class>
+      <UML:Generalization discriminator="" isSpecification="false" xmi.id="uyDNiMeeTz2bS" visibility="public" child="uFehINvz1tvAZ" name="" parent="u2gDZPelq6igu" namespace="Logical_View"/>
+      <UML:Class isRoot="false" isSpecification="false" isLeaf="false" xmi.id="uD9xFFUL441cl" isAbstract="false" visibility="public" name="Simulacion5" namespace="Logical_View">
+       <UML:GeneralizableElement.generalization>
+        <UML:Generalization xmi.idref="u7bw68wK0UDgQ"/>
+        <UML:Generalization xmi.idref="uVAZFrc6qY7Ga"/>
+       </UML:GeneralizableElement.generalization>
+       <UML:Classifier.feature>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="uDHs81HFGbBnF" isOverride="false" isAbstract="false" visibility="public" name="main" comment="En esta simulaci�n comprobaremosSimulacion 1Generar grafica">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="uGSowOJTSPQNm" kind="return" type="updGpUssomfPP"/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+       </UML:Classifier.feature>
+      </UML:Class>
+      <UML:Generalization discriminator="" isSpecification="false" xmi.id="u7bw68wK0UDgQ" visibility="public" child="uD9xFFUL441cl" name="" parent="u2gDZPelq6igu" namespace="Logical_View"/>
+      <UML:Class isRoot="false" isSpecification="false" isLeaf="false" xmi.id="uFMwu3B7a604H" isAbstract="false" visibility="public" name="algoritmoWatts" namespace="Logical_View">
+       <UML:GeneralizableElement.generalization>
+        <UML:Generalization xmi.idref="uzTaOokwWCd8L"/>
+       </UML:GeneralizableElement.generalization>
+       <UML:Classifier.feature>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="uAHY2qwCb3hnO" isOverride="false" isAbstract="false" visibility="public" name="main" comment="# Creamos grafo de anillo base.# Tenemos 20 nodos, ahora pongamosle nombres para trabajar# con ellos# Ahora a�adimos una arista que enlace cada vertice# con el vecino de su vecino en el sentido horario# a�adimos los dos ultimos ejes plot.show()# Aplicamos el proceso de rewire con probabilidad p# Tenemos una probabilidad de 0.5 de recablear# Esta parte se encarga de escoger un eje# aleatorio del vertice# random.choice(g1.es.select(v.index))# Escogemos el vertice al que enlazar# Aplicamos otra ronda# Tenemos una probabilidad de 0.5 de recablear# Esta parte se encarga de escoger un eje# aleatorio del vertice# random.choice(g1.es.select(v.index))# Escogemos el vertice al que enlazar">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="uAqaK2XvBJEtY" kind="return" type="updGpUssomfPP"/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="uOdMd6EWiOg0s" isOverride="false" isAbstract="false" visibility="public" name="ajustarTamanyo" comment="# Ejecutamos el algoritmo">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="u9W0wuXGXtZK2" kind="return" type="updGpUssomfPP"/>
+          <UML:Parameter isSpecification="false" xmi.id="ulbQerEDPwbab" visibility="private" name="grafo" type="updGpUssomfPP" value=""/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+       </UML:Classifier.feature>
+      </UML:Class>
+      <UML:Generalization discriminator="" isSpecification="false" xmi.id="uzTaOokwWCd8L" visibility="public" child="uFMwu3B7a604H" name="" parent="u2gDZPelq6igu" namespace="Logical_View"/>
+      <UML:Class isRoot="false" isSpecification="false" isLeaf="false" xmi.id="uUwB5aKboJNDX" isAbstract="false" visibility="public" name="Compartimentos" comment="Interfaz para los compartimentos del modelo" namespace="Logical_View">
+       <UML:GeneralizableElement.generalization>
+        <UML:Generalization xmi.idref="uZWdWvXgDlg7X"/>
+       </UML:GeneralizableElement.generalization>
+       <UML:Classifier.feature>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="uzzOFpfHtcUfn" isOverride="false" isAbstract="false" visibility="private" name="init__" comment="Mediante un grafo y los codigos de los compartimentos, comps,&#xa;crea los compartimentos del modelo">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="uF75wbaxVmjMd" kind="return" type="updGpUssomfPP"/>
+          <UML:Parameter isSpecification="false" xmi.id="uoaqvq13iBZby" visibility="private" name="grafo" type="updGpUssomfPP" value=""/>
+          <UML:Parameter isSpecification="false" xmi.id="uaZTCDz1LWnht" visibility="private" name="comps" type="updGpUssomfPP" value=""/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="ua4phvy7doOjy" isOverride="false" isAbstract="false" visibility="private" name="getitem__" comment="Devuelve el compartimento asociado&#xa;al codigo comp">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="uhEqTNfQfxtic" kind="return" type="updGpUssomfPP"/>
+          <UML:Parameter isSpecification="false" xmi.id="uoDs9KF8BxgAc" visibility="private" name="comp" type="updGpUssomfPP" value=""/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="upj741AY3wpap" isOverride="false" isAbstract="false" visibility="public" name="get_state" comment="Devuelve el codigo del compartimento&#xa;en el que se encuentra el vertice">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="u5iFdYbNraGOT" kind="return" type="updGpUssomfPP"/>
+          <UML:Parameter isSpecification="false" xmi.id="uGDEKL00sqKTu" visibility="private" name="vertice" type="updGpUssomfPP" value=""/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="uV6rQMKcekWQM" isOverride="false" isAbstract="false" visibility="public" name="move_vertice" comment="Cambia el vertice de compartimento">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="uxFNQ42qxvZSm" kind="return" type="updGpUssomfPP"/>
+          <UML:Parameter isSpecification="false" xmi.id="uNlka4Pw4yaX5" visibility="private" name="vertice" type="updGpUssomfPP" value=""/>
+          <UML:Parameter isSpecification="false" xmi.id="uZGAkLUF4wR13" visibility="private" name="comp" type="updGpUssomfPP" value=""/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="unuQja61e21IC" isOverride="false" isAbstract="false" visibility="public" name="move_vertices" comment="Moves multiple vertices from their current compartment&#xa;to another one">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="uTzNGdr436e3p" kind="return" type="updGpUssomfPP"/>
+          <UML:Parameter isSpecification="false" xmi.id="uIK0RZtRWUfOR" visibility="private" name="vertices" type="updGpUssomfPP" value=""/>
+          <UML:Parameter isSpecification="false" xmi.id="u6dvkR7AI2I2a" visibility="private" name="code" type="updGpUssomfPP" value=""/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="uAaVkD205iYDH" isOverride="false" isAbstract="false" visibility="public" name="tam_relativo" comment="Returns the relative size of the compartment with&#xa;the given 'code'">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="uqwijtLBwOpaE" kind="return" type="updGpUssomfPP"/>
+          <UML:Parameter isSpecification="false" xmi.id="uo2Tdl3rtd4KZ" visibility="private" name="code" type="updGpUssomfPP" value=""/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+       </UML:Classifier.feature>
+      </UML:Class>
+      <UML:Generalization discriminator="" isSpecification="false" xmi.id="uZWdWvXgDlg7X" visibility="public" child="uUwB5aKboJNDX" name="" parent="u2gDZPelq6igu" namespace="Logical_View"/>
+      <UML:Class isRoot="false" isSpecification="false" isLeaf="false" xmi.id="uxum6Gi8GTzSC" isAbstract="false" visibility="public" name="FuncionesNucleo" namespace="Logical_View">
+       <UML:Classifier.feature>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="uw6ew97U6NtV2" isOverride="false" isAbstract="false" visibility="public" name="generaGrafo" comment=" Erdos_Renyi(n, p, m, directed=False, loops=False) n = n vertices, p = probabilidad de aristas (si hay p, no hay m) m = numero de aristas Lattice(dim, nei=1, directed=False, mutual=True, circular=True) dim = lista con las diemnsiones del grafo(sqrst(n) * sqrt(n) en este caso) nei = distancia a la que dos vertices estan conectados Barabasi(n, m, outpref=False, directed=False, power=1, zero_appeal=1, implementation=&quot;psumtree&quot;, start_from=None) n = n vertices, m = numero de aristas de saldia en cada nodo, o una lista con todas las aristas power = constante de potencia, sino se especifica linear Watts_Strogatz(dim, size, nei, p, loops=False, multiple=False) Watts_Strogats parte de un grafo tipo Laticce dim = dimensiones del lattice, size = tamanyo de todas las dimensiones nei = distancia a la que dos vertices estan conectados p = rewiring probability Comprobamos que el grafo este conectado, sino lo conectamos nosotros">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="uZugyMjhRj1P0" kind="return" type="updGpUssomfPP"/>
+          <UML:Parameter isSpecification="false" xmi.id="uOKgw3KaUUH5o" visibility="private" name="tipo" type="updGpUssomfPP" value=""/>
+          <UML:Parameter isSpecification="false" xmi.id="u4RJGK8ivbu0Q" visibility="private" name="n" type="updGpUssomfPP" value=""/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="uoFuWcjPX22jz" isOverride="false" isAbstract="false" visibility="public" name="simulacion" comment=" los susceptibles estan por defecto con 10000 para igualar el tamanyo del grafo por defecto. Por tanto# Inicializamos grafo y modelo# Infectamos el numero de nodos indicado# realizamos los pasos">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="u9LmIhkgFL1pi" kind="return" type="updGpUssomfPP"/>
+          <UML:Parameter isSpecification="false" xmi.id="uq5GGg1UesA1d" visibility="private" name="modelo" type="updGpUssomfPP" value=""/>
+          <UML:Parameter isSpecification="false" xmi.id="un43B5HhLxsMp" visibility="private" name="tipo_grafo" type="updGpUssomfPP" value=""/>
+          <UML:Parameter isSpecification="false" xmi.id="uBKBZztNQrZC5" visibility="private" name="tam_grafo" type="updGpUssomfPP" value=""/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="u95pbAMRPtVrC" isOverride="false" isAbstract="false" visibility="public" name="simulacionHub" comment="Simulacion los susceptibles estan por defecto con 10000 para igualar el tamanyo del grafo por defecto. Por tanto# Inicializamos grafo y modelo# Infectamos el numero de nodos indicado realizamos los pasos">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="uDX68HwxRtNVN" kind="return" type="updGpUssomfPP"/>
+          <UML:Parameter isSpecification="false" xmi.id="ulpklrdexWpZe" visibility="private" name="modelo" type="updGpUssomfPP" value=""/>
+          <UML:Parameter isSpecification="false" xmi.id="uVtyG6dKQYHgS" visibility="private" name="tipo_grafo" type="updGpUssomfPP" value=""/>
+          <UML:Parameter isSpecification="false" xmi.id="uCSSiaJPIpfMe" visibility="private" name="tam_grafo" type="updGpUssomfPP" value=""/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="ueWl9zkZ8FMpm" isOverride="false" isAbstract="false" visibility="public" name="simulacionAntiHub" comment="Simulacion los susceptibles estan por defecto con 10000 para igualar el tamanyo del grafo por defecto. Por tanto# Inicializamos grafo y modelo# Infectamos el numero de nodos indicado realizamos los pasos">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="uKyxTGF13oSxK" kind="return" type="updGpUssomfPP"/>
+          <UML:Parameter isSpecification="false" xmi.id="u4Hk8qHnANKDi" visibility="private" name="modelo" type="updGpUssomfPP" value=""/>
+          <UML:Parameter isSpecification="false" xmi.id="uMfXRt0W1BINm" visibility="private" name="tipo_grafo" type="updGpUssomfPP" value=""/>
+          <UML:Parameter isSpecification="false" xmi.id="ueylp8IP6bxrV" visibility="private" name="tam_grafo" type="updGpUssomfPP" value=""/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="uUWgJh2V6am8f" isOverride="false" isAbstract="false" visibility="public" name="simulacionInteligente" comment="# Inicializamos grafo y modelo# Infectamos el numero de nodos indicado Comprobamos que son susceptibles# realizamos los pasos">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="uTY58y0FHq0wj" kind="return" type="updGpUssomfPP"/>
+          <UML:Parameter isSpecification="false" xmi.id="uUwA9TM8FZ5Rc" visibility="private" name="modelo" type="updGpUssomfPP" value=""/>
+          <UML:Parameter isSpecification="false" xmi.id="umvaZ3mPuqDEo" visibility="private" name="tipo_grafo" type="updGpUssomfPP" value=""/>
+          <UML:Parameter isSpecification="false" xmi.id="uulM47b1s7XrT" visibility="private" name="tam_grafo" type="updGpUssomfPP" value=""/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="uaeVQurLYKeD7" isOverride="false" isAbstract="false" visibility="public" name="simulacionInteligente2" comment="# Inicializamos grafo y modelo# Infectamos el numero de nodos indicado Comprobamos que son susceptibles# realizamos los pasos">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="uy4oIdlkCVWnA" kind="return" type="updGpUssomfPP"/>
+          <UML:Parameter isSpecification="false" xmi.id="uMLC4grSUxz71" visibility="private" name="modelo" type="updGpUssomfPP" value=""/>
+          <UML:Parameter isSpecification="false" xmi.id="unWL6Mckwswqa" visibility="private" name="tipo_grafo" type="updGpUssomfPP" value=""/>
+          <UML:Parameter isSpecification="false" xmi.id="ukCCdaJKURNY1" visibility="private" name="tam_grafo" type="updGpUssomfPP" value=""/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="umSafxf6iNcWb" isOverride="false" isAbstract="false" visibility="public" name="simulacionColores" comment="# Inicializamos grafo y modelo# Infectamos el numero de nodos indicado# Infectamos el numero de nodos indicado Comprobamos que son susceptibles# Marcamos los pacientes cero en negro# realizamos los pasos# realizamos los pasos">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="up2vL5Q11PHtY" kind="return" type="updGpUssomfPP"/>
+          <UML:Parameter isSpecification="false" xmi.id="umiUaX9LNgpOk" visibility="private" name="modelo" type="updGpUssomfPP" value=""/>
+          <UML:Parameter isSpecification="false" xmi.id="uPHLRsmY3y9Rq" visibility="private" name="tipo_grafo" type="updGpUssomfPP" value=""/>
+          <UML:Parameter isSpecification="false" xmi.id="ulJRytHUyY3Oo" visibility="private" name="tam_grafo" type="updGpUssomfPP" value=""/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="unhCxwKvNHqwg" isOverride="false" isAbstract="false" visibility="public" name="simulacionGrupoInicial" comment="Funcion simulacion adaptada, para que el grupo inicial de&#xa;infectados sean vecinos. los susceptibles estan por defecto con 10000 para igualar el tamanyo del grafo por defecto. Por tanto Inicializamos grafo y modelo Infectamos el numero de nodos indicado Comprobamos que son susceptibles# realizamos los pasos">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="uiIe9inlCjQP6" kind="return" type="updGpUssomfPP"/>
+          <UML:Parameter isSpecification="false" xmi.id="unWLnyLLXVTc2" visibility="private" name="modelo" type="updGpUssomfPP" value=""/>
+          <UML:Parameter isSpecification="false" xmi.id="up44wa7JuebCT" visibility="private" name="tipo_grafo" type="updGpUssomfPP" value=""/>
+          <UML:Parameter isSpecification="false" xmi.id="uWhBhx7Fz94FF" visibility="private" name="tam_grafo" type="updGpUssomfPP" value=""/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="uhM6KHn4hcNAk" isOverride="false" isAbstract="false" visibility="public" name="plot_results" comment="# Calculate the means for each time point# Create the argument list for pylab.plot# Creathe the plot">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="uS8pnH0XWO7Pe" kind="return" type="updGpUssomfPP"/>
+          <UML:Parameter isSpecification="false" xmi.id="uskVEWGPHmM0w" visibility="private" name="results" type="updGpUssomfPP" value=""/>
+          <UML:Parameter isSpecification="false" xmi.id="u8SeXxIVyQZhW" visibility="private" name="color" type="updGpUssomfPP" value=""/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="uOM0zKhetOq8g" isOverride="false" isAbstract="false" visibility="public" name="hallarUmbralCritico">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="uOySLwLR8oX1T" kind="return" type="updGpUssomfPP"/>
+          <UML:Parameter isSpecification="false" xmi.id="unJgZgE1Mf00M" visibility="private" name="modelo" type="updGpUssomfPP" value=""/>
+          <UML:Parameter isSpecification="false" xmi.id="ujFrMaiTPM8nP" visibility="private" name="tipo" type="updGpUssomfPP" value=""/>
+          <UML:Parameter isSpecification="false" xmi.id="uUuOGEOWpwitM" visibility="private" name="betas" type="updGpUssomfPP" value=""/>
+          <UML:Parameter isSpecification="false" xmi.id="ulO487eYY4n9i" visibility="private" name="*" type="updGpUssomfPP" value=""/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+       </UML:Classifier.feature>
+      </UML:Class>
+      <UML:Class isRoot="false" isSpecification="false" isLeaf="false" xmi.id="uFRA87iusL6Df" isAbstract="false" visibility="public" name="ModeloCompartimental" comment="Interfaz para la clase de los modelos&#xa;epidemiologicos compartimentales" namespace="Logical_View">
+       <UML:GeneralizableElement.generalization>
+        <UML:Generalization xmi.idref="uK1YSaGY2GOuf"/>
+       </UML:GeneralizableElement.generalization>
+       <UML:Classifier.feature>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="unncHkRW56C67" isOverride="false" isAbstract="false" visibility="private" name="init__" comment="Inicializa un.modelo compartimental sobre un&#xa;        grafo que recibe como argumento y el codigo&#xa;asociado a los compartimento">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="uH1wPIxy2yV9T" kind="return" type="updGpUssomfPP"/>
+          <UML:Parameter isSpecification="false" xmi.id="uxVOS6nudZtgx" visibility="private" name="grafo" type="updGpUssomfPP" value=""/>
+          <UML:Parameter isSpecification="false" xmi.id="u0CHjB8Mq32us" visibility="private" name="codes" type="updGpUssomfPP" value=""/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="uGtAdH1807d7q" isOverride="false" isAbstract="false" visibility="public" name="tam_relativo_compartimentos" comment="Returns the relative sizes of each comparment in the&#xa;model">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="u2X95mATDriDq" kind="return" type="updGpUssomfPP"/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="uHjYU8JnEobX3" isOverride="false" isAbstract="false" visibility="public" name="reset" comment="Resets the compartments to an initial state. This&#xa;method must be overriden in subclasses">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="uT43lxDpVyXxX" kind="return" type="updGpUssomfPP"/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="uuqSmvNYAasyX" isOverride="false" isAbstract="false" visibility="public" name="step" comment="Implements the logic of the epidemic model. This method&#xa;must be overriden by subclasses">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="uzU6Ftvg7KJlD" kind="return" type="updGpUssomfPP"/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="uNyxPQLkKMEOx" isOverride="false" isAbstract="false" visibility="public" name="step_many" comment="Runs 'n' steps of the epidemic model at once by&#xa;calling 'step' multiple times">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="uhdWS8yfq7sxw" kind="return" type="updGpUssomfPP"/>
+          <UML:Parameter isSpecification="false" xmi.id="u0X6en6RhDeMr" visibility="private" name="n" type="updGpUssomfPP" value=""/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+       </UML:Classifier.feature>
+      </UML:Class>
+      <UML:Generalization discriminator="" isSpecification="false" xmi.id="uK1YSaGY2GOuf" visibility="public" child="uFRA87iusL6Df" name="" parent="u2gDZPelq6igu" namespace="Logical_View"/>
+      <UML:Class isRoot="false" isSpecification="false" isLeaf="false" xmi.id="u9OW3atsiacyw" isAbstract="false" visibility="public" name="ModeloSIR" comment="Modelo epidemiologico SIR para redes" namespace="Logical_View">
+       <UML:GeneralizableElement.generalization>
+        <UML:Generalization xmi.idref="utF9UoRmMPCtG"/>
+       </UML:GeneralizableElement.generalization>
+       <UML:Classifier.feature>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="uTK8Cd3YjRK65" isOverride="false" isAbstract="false" visibility="private" name="init__" comment="Construye el modelo compartimental sobre el&#xa;        grafo que recibe como argumento, y le asigna los&#xa;valores de transicion.">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="uZXOWOxtkHbMg" kind="return" type="updGpUssomfPP"/>
+          <UML:Parameter isSpecification="false" xmi.id="uHQAWzzZqKvCi" visibility="private" name="graph" type="updGpUssomfPP" value=""/>
+          <UML:Parameter isSpecification="false" xmi.id="uZRE7YIcVkyFi" visibility="private" name="beta" type="updGpUssomfPP" value=""/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="uHiP6k3CoSeLz" isOverride="false" isAbstract="false" visibility="public" name="reset" comment="Inicializamos toda la poblacion a susceptibles">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="uhkGnnVImP6CL" kind="return" type="updGpUssomfPP"/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="uiKvWn4hjp0mJ" isOverride="false" isAbstract="false" visibility="public" name="step" comment="&quot; Un paso del modelo SIR# Extendemos la infeccion desde los nodos infectados# Algunos nodos se infectan# Algunos se recuperan">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="u471CGdPCtiUX" kind="return" type="updGpUssomfPP"/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="ugu6mK6nubd5T" isOverride="false" isAbstract="false" visibility="public" name="stepInteligente" comment="Un paso del modelo SIS en el que solo ataca nodos&#xa;con un grado superior a la media# Se extiende la infeccion Inicializamos un conjunto para los traspasos# Grado medio del grafo# Calculamos para cada vertice infectado# Cuales de sus vecinos seran infectados# Aplicamos los cambios# Algunos se recuperan">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="u5q6uRjBXCHEL" kind="return" type="updGpUssomfPP"/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="uRtP1jxSiVMu5" isOverride="false" isAbstract="false" visibility="public" name="stepInteligente2" comment="Un paso del modelo SIS en el que solo ataca nodos&#xa;con un grado superior a la media# Se extiende la infeccion Inicializamos un conjunto para los traspasos# Grado medio del grafo# Calculamos para cada vertice infectado# Cuales de sus vecinos seran infectados# Aplicamos los cambios# Algunos se recuperan">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="u1geT5Fw70s6B" kind="return" type="updGpUssomfPP"/>
+          <UML:Parameter isSpecification="false" xmi.id="uwTXsoCH5SV2W" visibility="private" name="beta" type="updGpUssomfPP" value=""/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+       </UML:Classifier.feature>
+      </UML:Class>
+      <UML:Generalization discriminator="" isSpecification="false" xmi.id="utF9UoRmMPCtG" visibility="public" child="u9OW3atsiacyw" name="" parent="uFRA87iusL6Df" namespace="Logical_View"/>
+      <UML:Class isRoot="false" isSpecification="false" isLeaf="false" xmi.id="ulkMzwvPYz9jO" isAbstract="false" visibility="public" name="ModeloSIRS" comment="Modelo epidemiologico SIRS para redes. Esta clase&#xa;extiende la del modelo SI" namespace="Logical_View">
+       <UML:GeneralizableElement.generalization>
+        <UML:Generalization xmi.idref="uZdMqH1SvPkCC"/>
+       </UML:GeneralizableElement.generalization>
+       <UML:Classifier.feature>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="uGyHtxDqonx3T" isOverride="false" isAbstract="false" visibility="private" name="init__" comment="# El nuevo valor de transicion entre# recuperados y susceptibles">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="u1U5xP17s5Kr7" kind="return" type="updGpUssomfPP"/>
+          <UML:Parameter isSpecification="false" xmi.id="uYORU1eJLMEqw" visibility="private" name="graph" type="updGpUssomfPP" value=""/>
+          <UML:Parameter isSpecification="false" xmi.id="uLoDu5XmoCs1C" visibility="private" name="beta" type="updGpUssomfPP" value=""/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="uqok5ZfD919ii" isOverride="false" isAbstract="false" visibility="public" name="step" comment="Respecto al SIR solo incluye un paso mas donde los&#xa;recuperados pueden pasar a ser susceptibles# Ahora llamamos al SIR">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="uKQs1PBbjRMul" kind="return" type="updGpUssomfPP"/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+       </UML:Classifier.feature>
+      </UML:Class>
+      <UML:Generalization discriminator="" isSpecification="false" xmi.id="uZdMqH1SvPkCC" visibility="public" child="ulkMzwvPYz9jO" name="" parent="u9OW3atsiacyw" namespace="Logical_View"/>
+      <UML:Class isRoot="false" isSpecification="false" isLeaf="false" xmi.id="uy0RiOMzbX8Q9" isAbstract="false" visibility="public" name="ModeloSIS" comment="SIS, modelo epidemiologico para redes" namespace="Logical_View">
+       <UML:GeneralizableElement.generalization>
+        <UML:Generalization xmi.idref="ulYOyntvM3YRp"/>
+       </UML:GeneralizableElement.generalization>
+       <UML:Classifier.feature>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="umtjXSDokGMV5" isOverride="false" isAbstract="false" visibility="private" name="init__" comment="Inicializamos los compartimentos y damos valores a los parametros">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="un4vr2kn3TXEq" kind="return" type="updGpUssomfPP"/>
+          <UML:Parameter isSpecification="false" xmi.id="uoJWK07GpGZMW" visibility="private" name="g" type="updGpUssomfPP" value=""/>
+          <UML:Parameter isSpecification="false" xmi.id="u5JoE5bi6B4Ps" visibility="private" name="beta" type="updGpUssomfPP" value=""/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="um2MxmBOQ4Ivx" isOverride="false" isAbstract="false" visibility="public" name="reset" comment="Inicializamos toda la poblacion a susceptibles">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="utzu6cpJ5mI72" kind="return" type="updGpUssomfPP"/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="uEE9SvmfTDzWF" isOverride="false" isAbstract="false" visibility="public" name="step" comment="Un paso del modelo SIS# Se extiende la infeccion Inicializamos un conjunto para los traspasos# Calculamos para cada vertice infectado# Cuales de sus vecinos seran infectados# Aplicamos los cambios# Algunos de los infectados se curaran">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="u1jcf303f19wk" kind="return" type="updGpUssomfPP"/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="uKYHoAcKPgpcY" isOverride="false" isAbstract="false" visibility="public" name="stepInteligente" comment="Un paso del modelo SIS en el que solo ataca nodos&#xa;con un grado superior a la media# Se extiende la infeccion Inicializamos un conjunto para los traspasos# Grado medio del grafo# Calculamos para cada vertice infectado# Cuales de sus vecinos seran infectados# Aplicamos los cambios# Algunos de los infectados se curaran">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="uUlit7Yp7UAlx" kind="return" type="updGpUssomfPP"/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="u7Jx0Gk4vPi4l" isOverride="false" isAbstract="false" visibility="public" name="stepInteligente2" comment="Un paso del modelo SIS en el que solo ataca nodos&#xa;con un grado superior a la media# Se extiende la infeccion Inicializamos un conjunto para los traspasos# Grado medio del grafo# Calculamos para cada vertice infectado# Cuales de sus vecinos seran infectados# Aplicamos los cambios# Algunos de los infectados se curaran">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="uvMM0Y1s3GvGQ" kind="return" type="updGpUssomfPP"/>
+          <UML:Parameter isSpecification="false" xmi.id="u9oPJ9V7hbTSB" visibility="private" name="beta" type="updGpUssomfPP" value=""/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+       </UML:Classifier.feature>
+      </UML:Class>
+      <UML:Generalization discriminator="" isSpecification="false" xmi.id="ulYOyntvM3YRp" visibility="public" child="uy0RiOMzbX8Q9" name="" parent="uFRA87iusL6Df" namespace="Logical_View"/>
+      <UML:Class isRoot="false" isSpecification="false" isLeaf="false" xmi.id="u6L3x3f6fT2Gs" isAbstract="false" visibility="public" name="ModeloXSIR" comment="Modelo epidemiologico SIR para redes, con un nuevo estado&#xa;de inmunes que llamaremos X." namespace="Logical_View">
+       <UML:GeneralizableElement.generalization>
+        <UML:Generalization xmi.idref="uOMZg3eQRZ6Cm"/>
+       </UML:GeneralizableElement.generalization>
+       <UML:Classifier.feature>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="uic5pVSNVB9jc" isOverride="false" isAbstract="false" visibility="private" name="init__" comment="Construye el modelo compartimental sobre el&#xa;        grafo que recibe como argumento, y le asigna los&#xa;valores de transicion.">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="u9WUUCskbL1N8" kind="return" type="updGpUssomfPP"/>
+          <UML:Parameter isSpecification="false" xmi.id="u5EXRyQiDmyzt" visibility="private" name="graph" type="updGpUssomfPP" value=""/>
+          <UML:Parameter isSpecification="false" xmi.id="u60KIYejSxowU" visibility="private" name="beta" type="updGpUssomfPP" value=""/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="uJavbB9W7Kenf" isOverride="false" isAbstract="false" visibility="public" name="reset" comment="Inicializamos toda la poblacion a susceptibles">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="uX8JL6V2VJVdF" kind="return" type="updGpUssomfPP"/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="uGrpLqESBfeXO" isOverride="false" isAbstract="false" visibility="public" name="step" comment="&quot; Un paso del modelo XSIR que es lo mismo que de SIR# Extendemos la infeccion desde los nodos infectados# Algunos nodos se infectan# Algunos se recuperan">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="unmWVrCa7yOhJ" kind="return" type="updGpUssomfPP"/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="u1Xqy2xMfu428" isOverride="false" isAbstract="false" visibility="public" name="stepInteligente" comment="Un paso del modelo SIS en el que solo ataca nodos&#xa;con un grado superior a la media# Se extiende la infeccion Inicializamos un conjunto para los traspasos# Grado medio del grafo# Calculamos para cada vertice infectado# Cuales de sus vecinos seran infectados# Aplicamos los cambios# Algunos se recuperan">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="uEcSB77rMqhLi" kind="return" type="updGpUssomfPP"/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="uNMZAivGDalu5" isOverride="false" isAbstract="false" visibility="public" name="stepInteligente2" comment="Un paso del modelo SIS en el que solo ataca nodos&#xa;con un grado superior a la media# Se extiende la infeccion Inicializamos un conjunto para los traspasos# Grado medio del grafo# Calculamos para cada vertice infectado# Cuales de sus vecinos seran infectados# Aplicamos los cambios# Algunos se recuperan">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="uq96zUJoOdsdo" kind="return" type="updGpUssomfPP"/>
+          <UML:Parameter isSpecification="false" xmi.id="uhemgauchu2cd" visibility="private" name="beta" type="updGpUssomfPP" value=""/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+       </UML:Classifier.feature>
+      </UML:Class>
+      <UML:Generalization discriminator="" isSpecification="false" xmi.id="uOMZg3eQRZ6Cm" visibility="public" child="u6L3x3f6fT2Gs" name="" parent="uFRA87iusL6Df" namespace="Logical_View"/>
+      <UML:Class isRoot="false" isSpecification="false" isLeaf="false" xmi.id="uXmVndUnPieqG" isAbstract="false" visibility="public" name="pforSW" namespace="Logical_View">
+       <UML:GeneralizableElement.generalization>
+        <UML:Generalization xmi.idref="uKsAlWkZdwL2X"/>
+       </UML:GeneralizableElement.generalization>
+       <UML:Classifier.feature>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="u5U6F0ETVcFT6" isOverride="false" isAbstract="false" visibility="public" name="main">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="uDk7K3Zol8wok" kind="return" type="updGpUssomfPP"/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="uPqAmmbE0eZoW" isOverride="false" isAbstract="false" visibility="public" name="rondaWatts" comment="# Tenemos una probabilidad de 0.5 de recablear# Esta parte se encarga de escoger un eje# aleatorio del vertice# random.choice(g1.es.select(v.index))# Escogemos el vertice al que enlazar">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="u0mzeni00NZjs" kind="return" type="updGpUssomfPP"/>
+          <UML:Parameter isSpecification="false" xmi.id="ucSacQso0X4IE" visibility="private" name="g1" type="updGpUssomfPP" value=""/>
+          <UML:Parameter isSpecification="false" xmi.id="urZHmnLyzTJv7" visibility="private" name="p" type="updGpUssomfPP" value=""/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="u4KZbz5afOTjn" isOverride="false" isAbstract="false" visibility="public" name="generaGrafo" comment="# Creamos grafo de anillo base.# Tenemos 20 nodos, ahora pongamosle nombres para trabajar# con ellos# Ahora a�adimos una arista que enlace cada vertice# con el vecino de su vecino en el sentido horario# a�adimos los dos ultimos ejes# Aplicamos el proceso de rewire con probabilidad p# 3 veces.# Guardamos el grafo">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="urVQDRrZyC7Lk" kind="return" type="updGpUssomfPP"/>
+          <UML:Parameter isSpecification="false" xmi.id="uM72wYCGfevJo" visibility="private" name="fichero" type="updGpUssomfPP" value=""/>
+          <UML:Parameter isSpecification="false" xmi.id="uSknlTid3aUZf" visibility="private" name="p" type="updGpUssomfPP" value=""/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+       </UML:Classifier.feature>
+      </UML:Class>
+      <UML:Generalization discriminator="" isSpecification="false" xmi.id="uKsAlWkZdwL2X" visibility="public" child="uXmVndUnPieqG" name="" parent="u2gDZPelq6igu" namespace="Logical_View"/>
+      <UML:Class isRoot="false" isSpecification="false" isLeaf="false" xmi.id="u6E9UGVjiETPs" isAbstract="false" visibility="public" name="Simulacion1" namespace="Logical_View">
+       <UML:GeneralizableElement.generalization>
+        <UML:Generalization xmi.idref="uPP1bilCpJXcH"/>
+       </UML:GeneralizableElement.generalization>
+       <UML:Classifier.feature>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="u65DHcw9vu2pM" isOverride="false" isAbstract="false" visibility="public" name="main" comment="En esta primera simulacion vamos a ver como influye el tamanyo&#xa;        de la poblacion en el porcentaje de poblacion en cada compartimento.&#xa;        Para ello realizaremos la simulacion sobre un grafo en un periodo de&#xa;100 unidades de tiempo para tamanyos desde 100 a 1000000# CdE Anyadimos el resultado La simulacion con un millon de nodos solo la haremos una vez por limitaciones del HW.# CdE Anyadimos el resultado">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="u5A1Hc98SBwbj" kind="return" type="updGpUssomfPP"/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+       </UML:Classifier.feature>
+      </UML:Class>
+      <UML:Generalization discriminator="" isSpecification="false" xmi.id="uPP1bilCpJXcH" visibility="public" child="u6E9UGVjiETPs" name="" parent="u2gDZPelq6igu" namespace="Logical_View"/>
+      <UML:Class isRoot="false" isSpecification="false" isLeaf="false" xmi.id="uMSTpMxvcNpuj" isAbstract="false" visibility="public" name="Simulacion2" namespace="Logical_View">
+       <UML:GeneralizableElement.generalization>
+        <UML:Generalization xmi.idref="uysLdrxb9qrNI"/>
+       </UML:GeneralizableElement.generalization>
+       <UML:Classifier.feature>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="uWR5Poi89vqvx" isOverride="false" isAbstract="false" visibility="public" name="main" comment="En esta segunda simulaci�n vamos a comprobar como afecta&#xa;en una epidemia si el virus empieza en un hub o no.">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="ubHFlVrio6w2R" kind="return" type="updGpUssomfPP"/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+       </UML:Classifier.feature>
+      </UML:Class>
+      <UML:Generalization discriminator="" isSpecification="false" xmi.id="uysLdrxb9qrNI" visibility="public" child="uMSTpMxvcNpuj" name="" parent="u2gDZPelq6igu" namespace="Logical_View"/>
+      <UML:Class isRoot="false" isSpecification="false" isLeaf="false" xmi.id="uObtItlrgfTIx" isAbstract="false" visibility="public" name="Simulacion3" namespace="Logical_View">
+       <UML:GeneralizableElement.generalization>
+        <UML:Generalization xmi.idref="uKwFsPBUL280b"/>
+       </UML:GeneralizableElement.generalization>
+       <UML:Classifier.feature>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="uLVd0MEFE20kK" isOverride="false" isAbstract="false" visibility="public" name="main" comment="En esta simulacion procederemos a ver cuanto mejora&#xa;        un gusano si le metemos intelegencia. En nuestra simulaci�n,&#xa;        usaremos un nodo de tam 10^5, en el que supondremos como tres&#xa;        cuartas partes de la poblacion es susceptible, y empieza con tres&#xa;        infectados. Estos tres infectados tendr�n probabilidad 1 de infectar&#xa;        a nodos con mayor grado que la media en los 5 primeros contactos, y&#xa;        0 en caso contrario. Despu�s la epidemia se ejecuta con los valores&#xa;        de transici�n de las simulaciones anteriores. Por otra parte, se&#xa;simular� la misma prueba sin contar esta inteligenciaSimulacion 1Simulacion 2Generar grafica">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="uV1u05xAVovhw" kind="return" type="updGpUssomfPP"/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+       </UML:Classifier.feature>
+      </UML:Class>
+      <UML:Generalization discriminator="" isSpecification="false" xmi.id="uKwFsPBUL280b" visibility="public" child="uObtItlrgfTIx" name="" parent="u2gDZPelq6igu" namespace="Logical_View"/>
+      <UML:Class isRoot="false" isSpecification="false" isLeaf="false" xmi.id="uhyShL49jdWNO" isAbstract="false" visibility="public" name="Simulacion4" namespace="Logical_View">
+       <UML:GeneralizableElement.generalization>
+        <UML:Generalization xmi.idref="uP34mr4nv4NFl"/>
+       </UML:GeneralizableElement.generalization>
+       <UML:Classifier.feature>
+        <UML:Operation isRoot="false" isQuery="false" isSpecification="false" isLeaf="false" xmi.id="uD0jpLVhluVpI" isOverride="false" isAbstract="false" visibility="public" name="main" comment="En esta simulacion procederemos a ver cuanto mejora&#xa;        un gusano si le metemos intelegencia. En nuestra simulaci�n,&#xa;        usaremos un nodo de tam 10^5, en el que supondremos como tres&#xa;        cuartas partes de la poblacion es susceptible, y empieza con tres&#xa;        infectados. Estos tres infectados tendr�n probabilidad 1 de infectar&#xa;        a nodos con mayor grado que la media en los 5 primeros contactos, y 0&#xa;        en caso contrario. Despu�s la epidemia se ejecuta con los valores de&#xa;        transici�n de las simulaciones anteriores. Por otra parte,&#xa;se simular� la misma prueba sin contar esta inteligenciaSimulacion 1Simulacion 2Generar grafica">
+         <UML:BehavioralFeature.parameter>
+          <UML:Parameter xmi.id="u9cXrDB6krVCl" kind="return" type="updGpUssomfPP"/>
+         </UML:BehavioralFeature.parameter>
+        </UML:Operation>
+       </UML:Classifier.feature>
+      </UML:Class>
+      <UML:Generalization discriminator="" isSpecification="false" xmi.id="uP34mr4nv4NFl" visibility="public" child="uhyShL49jdWNO" name="" parent="u2gDZPelq6igu" namespace="Logical_View"/>
+      <UML:Generalization discriminator="" isSpecification="false" xmi.id="uVAZFrc6qY7Ga" visibility="public" child="uD9xFFUL441cl" name="" parent="u2gDZPelq6igu" namespace="Logical_View"/>
+      <UML:Association isSpecification="false" xmi.id="uO6y0vFRF7Fq1" visibility="public" name="" namespace="Logical_View">
+       <UML:Association.connection>
+        <UML:AssociationEnd changeability="changeable" isSpecification="false" aggregation="none" xmi.id="urki4HZngter8" visibility="public" name="" isNavigable="false" type="uxum6Gi8GTzSC"/>
+        <UML:AssociationEnd changeability="changeable" isSpecification="false" aggregation="none" xmi.id="uETy6QwBHkWDb" visibility="public" name="" isNavigable="true" type="u9OW3atsiacyw"/>
+       </UML:Association.connection>
+      </UML:Association>
+      <UML:Association isSpecification="false" xmi.id="uReMpNI63Q58i" visibility="public" name="" namespace="Logical_View">
+       <UML:Association.connection>
+        <UML:AssociationEnd changeability="changeable" isSpecification="false" aggregation="none" xmi.id="uRQPcL4XdrqzK" visibility="public" name="" isNavigable="false" type="u6E9UGVjiETPs"/>
+        <UML:AssociationEnd changeability="changeable" isSpecification="false" aggregation="none" xmi.id="uzPOOjTdGXwps" visibility="public" name="" isNavigable="true" type="uxum6Gi8GTzSC"/>
+       </UML:Association.connection>
+      </UML:Association>
+      <UML:Association isSpecification="false" xmi.id="u6uBMut5S3AqV" visibility="public" name="" namespace="Logical_View">
+       <UML:Association.connection>
+        <UML:AssociationEnd changeability="changeable" isSpecification="false" aggregation="composite" xmi.id="uCDWO7gEl5GeR" visibility="public" name="" isNavigable="true" type="uFRA87iusL6Df"/>
+        <UML:AssociationEnd changeability="changeable" isSpecification="false" aggregation="none" xmi.id="u8nZSw2NZA513" visibility="public" name="" isNavigable="true" type="uUwB5aKboJNDX"/>
+       </UML:Association.connection>
+      </UML:Association>
+     </UML:Namespace.ownedElement>
+     <XMI.extension xmi.extender="umbrello">
+      <diagrams resolution="96">
+       <diagram usefillcolor="1" name="diagrama de clases" linewidth="0" snapcsgrid="0" isopen="1" griddotcolor="#d3d3d3" zoom="57,17532455930334" snapx="25" documentation="" fillcolor="#ffff00" localid="-1" snapy="25" textcolor="#000000" showattsig="1" canvaswidth="1690" showattribassocs="1" showgrid="0" canvasheight="1144.66" showstereotype="1" font="Ubuntu,11,-1,5,50,0,0,0,0,0" showscope="1" type="1" backgroundcolor="#ffffff" xmi.id="uF2scD7ws6uuH" showpackage="1" showatts="1" showops="1" linecolor="#ff0000" snapgrid="0" showopsig="1" showpubliconly="0">
+        <widgets>
+         <classwidget usefillcolor="1" showattributes="1" showattsigs="601" isinstance="0" linewidth="0" fillcolor="#ffff00" usesdiagramfillcolor="0" localid="u5RKr4PxJOfNG" textcolor="#000000" y="-845.387" autoresize="1" showstereotype="1" usesdiagramusefillcolor="0" x="-999.39" font="Ubuntu,11,-1,5,50,0,0,0,0,0" showscope="1" showopsigs="601" height="195" xmi.id="uxum6Gi8GTzSC" showpackage="1" showoperations="1" linecolor="#ff0000" width="597" showpubliconly="0"/>
+         <classwidget usefillcolor="1" showattributes="1" showattsigs="601" isinstance="0" linewidth="0" fillcolor="#ffff00" usesdiagramfillcolor="0" localid="uyQiuHaYgvNY6" textcolor="#000000" y="-566.422" autoresize="1" showstereotype="1" usesdiagramusefillcolor="0" x="-823.101" font="Ubuntu,11,-1,5,50,0,0,0,0,0" showscope="1" showopsigs="601" height="110" xmi.id="u9OW3atsiacyw" showpackage="1" showoperations="1" linecolor="#ff0000" width="293" showpubliconly="0"/>
+         <classwidget usefillcolor="1" showattributes="1" showattsigs="601" isinstance="0" linewidth="0" fillcolor="#ffff00" usesdiagramfillcolor="0" localid="u2mW0q6lxPPAU" textcolor="#000000" y="-393.175" autoresize="1" showstereotype="1" usesdiagramusefillcolor="0" x="-849.838" font="Ubuntu,11,-1,5,50,0,0,0,0,0" showscope="1" showopsigs="601" height="110" xmi.id="uFRA87iusL6Df" showpackage="1" showoperations="1" linecolor="#ff0000" width="299" showpubliconly="0"/>
+         <classwidget usefillcolor="1" showattributes="1" showattsigs="601" isinstance="0" linewidth="0" fillcolor="#ffff00" usesdiagramfillcolor="0" localid="uytoYm2EEdvt0" textcolor="#000000" y="-710.097" autoresize="1" showstereotype="1" usesdiagramusefillcolor="0" x="-302.578" font="Ubuntu,11,-1,5,50,0,0,0,0,0" showscope="1" showopsigs="601" height="59" xmi.id="uFMwu3B7a604H" showpackage="1" showoperations="1" linecolor="#ff0000" width="277" showpubliconly="0"/>
+         <classwidget usefillcolor="1" showattributes="1" showattsigs="601" isinstance="0" linewidth="0" fillcolor="#ffff00" usesdiagramfillcolor="0" localid="uwrTYIS8p9Uhu" textcolor="#000000" y="-977.694" autoresize="1" showstereotype="1" usesdiagramusefillcolor="0" x="-503.714" font="Ubuntu,11,-1,5,50,0,0,0,0,0" showscope="1" showopsigs="601" height="42" xmi.id="uD9xFFUL441cl" showpackage="1" showoperations="1" linecolor="#ff0000" width="117" showpubliconly="0"/>
+         <classwidget usefillcolor="1" showattributes="1" showattsigs="601" isinstance="0" linewidth="0" fillcolor="#ffff00" usesdiagramfillcolor="0" localid="uHt3F3Ifzi4Ni" textcolor="#000000" y="-982.942" autoresize="1" showstereotype="1" usesdiagramusefillcolor="0" x="-668.12" font="Ubuntu,11,-1,5,50,0,0,0,0,0" showscope="1" showopsigs="601" height="42" xmi.id="uhyShL49jdWNO" showpackage="1" showoperations="1" linecolor="#ff0000" width="117" showpubliconly="0"/>
+         <classwidget usefillcolor="1" showattributes="1" showattsigs="601" isinstance="0" linewidth="0" fillcolor="#ffff00" usesdiagramfillcolor="0" localid="usMeMvKkMukBs" textcolor="#000000" y="-981.193" autoresize="1" showstereotype="1" usesdiagramusefillcolor="0" x="-808.041" font="Ubuntu,11,-1,5,50,0,0,0,0,0" showscope="1" showopsigs="601" height="42" xmi.id="uObtItlrgfTIx" showpackage="1" showoperations="1" linecolor="#ff0000" width="117" showpubliconly="0"/>
+         <classwidget usefillcolor="1" showattributes="1" showattsigs="601" isinstance="0" linewidth="0" fillcolor="#ffff00" usesdiagramfillcolor="0" localid="u9VgsAgkrekcJ" textcolor="#000000" y="-979.443" autoresize="1" showstereotype="1" usesdiagramusefillcolor="0" x="-963.702" font="Ubuntu,11,-1,5,50,0,0,0,0,0" showscope="1" showopsigs="601" height="42" xmi.id="uMSTpMxvcNpuj" showpackage="1" showoperations="1" linecolor="#ff0000" width="117" showpubliconly="0"/>
+         <classwidget usefillcolor="1" showattributes="1" showattsigs="601" isinstance="0" linewidth="0" fillcolor="#ffff00" usesdiagramfillcolor="0" localid="uM3zINN0zOWxN" textcolor="#000000" y="-234.367" autoresize="1" showstereotype="1" usesdiagramusefillcolor="0" x="-879.75" font="Ubuntu,11,-1,5,50,0,0,0,0,0" showscope="1" showopsigs="601" height="127" xmi.id="uUwB5aKboJNDX" showpackage="1" showoperations="1" linecolor="#ff0000" width="374" showpubliconly="0"/>
+         <classwidget usefillcolor="1" showattributes="1" showattsigs="601" isinstance="0" linewidth="0" fillcolor="#ffff00" usesdiagramfillcolor="0" localid="uZH9W8VymhSE1" textcolor="#000000" y="-990.256" autoresize="1" showstereotype="1" usesdiagramusefillcolor="0" x="-1113.4" font="Ubuntu,11,-1,5,50,0,0,0,0,0" showscope="1" showopsigs="601" height="42" xmi.id="u6E9UGVjiETPs" showpackage="1" showoperations="1" linecolor="#ff0000" width="117" showpubliconly="0"/>
+         <classwidget usefillcolor="1" showattributes="1" showattsigs="601" isinstance="0" linewidth="0" fillcolor="#ffff00" usesdiagramfillcolor="0" localid="ujyQTw7xI5ziw" textcolor="#000000" y="-956.706" autoresize="1" showstereotype="1" usesdiagramusefillcolor="0" x="-300.829" font="Ubuntu,11,-1,5,50,0,0,0,0,0" showscope="1" showopsigs="601" height="76" xmi.id="uXmVndUnPieqG" showpackage="1" showoperations="1" linecolor="#ff0000" width="333" showpubliconly="0"/>
+         <classwidget usefillcolor="1" showattributes="1" showattsigs="601" isinstance="0" linewidth="0" fillcolor="#ffff00" usesdiagramfillcolor="0" localid="um8Pq4MCFnHA4" textcolor="#000000" y="-834.276" autoresize="1" showstereotype="1" usesdiagramusefillcolor="0" x="-300.829" font="Ubuntu,11,-1,5,50,0,0,0,0,0" showscope="1" showopsigs="601" height="76" xmi.id="uFehINvz1tvAZ" showpackage="1" showoperations="1" linecolor="#ff0000" width="398" showpubliconly="0"/>
+        </widgets>
+        <messages/>
+        <associations>
+         <assocwidget usefillcolor="1" widgetaid="u9OW3atsiacyw" linewidth="0" fillcolor="none" usesdiagramfillcolor="1" totalcountb="2" textcolor="none" totalcounta="2" autoresize="1" indexa="1" indexb="1" usesdiagramusefillcolor="1" font="Ubuntu,11,-1,5,50,0,0,0,0,0" type="500" widgetbid="uFRA87iusL6Df" xmi.id="utF9UoRmMPCtG" seqnum="" linecolor="#ff0000">
+          <linepath layout="Polyline">
+           <startpoint startx="-634.79" starty="-456.422"/>
+           <endpoint endy="-393.175" endx="-634.79"/>
+          </linepath>
+         </assocwidget>
+         <assocwidget usefillcolor="1" widgetaid="u6E9UGVjiETPs" linewidth="0" fillcolor="none" usesdiagramfillcolor="1" totalcountb="2" textcolor="none" totalcounta="2" autoresize="1" indexa="1" indexb="1" usesdiagramusefillcolor="1" font="Ubuntu,11,-1,5,50,0,0,0,0,0" type="512" widgetbid="uxum6Gi8GTzSC" xmi.id="uReMpNI63Q58i" seqnum="" linecolor="#ff0000">
+          <linepath layout="Polyline">
+           <startpoint startx="-999.39" starty="-948.256"/>
+           <endpoint endy="-845.387" endx="-999.39"/>
+          </linepath>
+         </assocwidget>
+         <assocwidget usefillcolor="1" widgetaid="uxum6Gi8GTzSC" linewidth="0" fillcolor="none" usesdiagramfillcolor="1" totalcountb="2" textcolor="none" totalcounta="2" autoresize="1" indexa="1" indexb="1" usesdiagramusefillcolor="1" font="Ubuntu,11,-1,5,50,0,0,0,0,0" type="512" widgetbid="u9OW3atsiacyw" xmi.id="uO6y0vFRF7Fq1" seqnum="" linecolor="#ff0000">
+          <linepath layout="Polyline">
+           <startpoint startx="-614.053" starty="-650.387"/>
+           <endpoint endy="-566.422" endx="-614.053"/>
+          </linepath>
+         </assocwidget>
+         <assocwidget usefillcolor="1" widgetaid="uFRA87iusL6Df" linewidth="0" fillcolor="none" usesdiagramfillcolor="1" totalcountb="2" textcolor="none" totalcounta="2" autoresize="1" indexa="1" indexb="1" usesdiagramusefillcolor="1" font="Ubuntu,11,-1,5,50,0,0,0,0,0" type="510" widgetbid="uUwB5aKboJNDX" xmi.id="u6uBMut5S3AqV" seqnum="" linecolor="#ff0000">
+          <linepath layout="Polyline">
+           <startpoint startx="-692.75" starty="-283.175"/>
+           <endpoint endy="-234.367" endx="-692.75"/>
+          </linepath>
+         </assocwidget>
+        </associations>
+       </diagram>
+       <diagram usefillcolor="1" name="diagrama de clases_1" linewidth="0" snapcsgrid="0" isopen="1" griddotcolor="#d3d3d3" zoom="100" snapx="25" documentation="" fillcolor="#ffff00" localid="-1" snapy="25" textcolor="#000000" showattsig="1" canvaswidth="0" showattribassocs="1" showgrid="0" canvasheight="0" showstereotype="1" font="Ubuntu,11,-1,5,50,0,0,0,0,0" showscope="1" type="1" backgroundcolor="#ffffff" xmi.id="ukK9klwtaud9J" showpackage="1" showatts="1" showops="1" linecolor="#ff0000" snapgrid="0" showopsig="1" showpubliconly="0">
+        <widgets/>
+        <messages/>
+        <associations/>
+       </diagram>
+      </diagrams>
+     </XMI.extension>
+    </UML:Model>
+    <UML:Model isRoot="false" isSpecification="false" isLeaf="false" xmi.id="Use_Case_View" isAbstract="false" visibility="public" name="Use Case View" namespace="m1">
+     <UML:Namespace.ownedElement/>
+    </UML:Model>
+    <UML:Model isRoot="false" isSpecification="false" isLeaf="false" xmi.id="Component_View" isAbstract="false" visibility="public" name="Component View" namespace="m1">
+     <UML:Namespace.ownedElement/>
+    </UML:Model>
+    <UML:Model isRoot="false" isSpecification="false" isLeaf="false" xmi.id="Deployment_View" isAbstract="false" visibility="public" name="Deployment View" namespace="m1">
+     <UML:Namespace.ownedElement/>
+    </UML:Model>
+    <UML:Model isRoot="false" isSpecification="false" isLeaf="false" xmi.id="Entity_Relationship_Model" isAbstract="false" visibility="public" name="Entity Relationship Model" namespace="m1">
+     <UML:Namespace.ownedElement/>
+    </UML:Model>
+   </UML:Namespace.ownedElement>
+  </UML:Model>
+ </XMI.content>
+ <XMI.extensions xmi.extender="umbrello">
+  <docsettings uniqueid="uytoYm2EEdvt0" documentation="" viewid="uF2scD7ws6uuH"/>
+  <listview>
+   <listitem open="1" id="Views" type="800">
+    <listitem open="1" id="Entity_Relationship_Model" type="836"/>
+    <listitem open="1" id="Use_Case_View" type="802"/>
+    <listitem open="1" id="Component_View" type="821"/>
+    <listitem open="1" id="Deployment_View" type="827"/>
+    <listitem open="1" id="Logical_View" type="801">
+     <listitem open="0" id="uFehINvz1tvAZ" type="813">
+      <listitem open="0" id="uMn9Yq09foQAb" type="815"/>
+      <listitem open="0" id="uMnw8hlz0paIg" type="815"/>
+      <listitem open="0" id="ubNiIfAqFIcCo" type="815"/>
+     </listitem>
+     <listitem open="0" id="uFMwu3B7a604H" type="813">
+      <listitem open="0" id="uOdMd6EWiOg0s" type="815"/>
+      <listitem open="0" id="uAHY2qwCb3hnO" type="815"/>
+     </listitem>
+     <listitem open="0" id="uUwB5aKboJNDX" type="813">
+      <listitem open="0" id="upj741AY3wpap" type="815"/>
+      <listitem open="0" id="ua4phvy7doOjy" type="815"/>
+      <listitem open="0" id="uzzOFpfHtcUfn" type="815"/>
+      <listitem open="0" id="uV6rQMKcekWQM" type="815"/>
+      <listitem open="0" id="unuQja61e21IC" type="815"/>
+      <listitem open="0" id="uAaVkD205iYDH" type="815"/>
+     </listitem>
+     <listitem label="diagrama de clases" open="0" id="uF2scD7ws6uuH" type="807"/>
+     <listitem label="diagrama de clases_1" open="0" id="ukK9klwtaud9J" type="807"/>
+     <listitem open="0" id="uxum6Gi8GTzSC" type="813">
+      <listitem open="0" id="uw6ew97U6NtV2" type="815"/>
+      <listitem open="0" id="uOM0zKhetOq8g" type="815"/>
+      <listitem open="0" id="uhM6KHn4hcNAk" type="815"/>
+      <listitem open="0" id="uoFuWcjPX22jz" type="815"/>
+      <listitem open="0" id="ueWl9zkZ8FMpm" type="815"/>
+      <listitem open="0" id="umSafxf6iNcWb" type="815"/>
+      <listitem open="0" id="unhCxwKvNHqwg" type="815"/>
+      <listitem open="0" id="u95pbAMRPtVrC" type="815"/>
+      <listitem open="0" id="uUWgJh2V6am8f" type="815"/>
+      <listitem open="0" id="uaeVQurLYKeD7" type="815"/>
+     </listitem>
+     <listitem open="0" id="uFRA87iusL6Df" type="813">
+      <listitem open="0" id="unncHkRW56C67" type="815"/>
+      <listitem open="0" id="uHjYU8JnEobX3" type="815"/>
+      <listitem open="0" id="uNyxPQLkKMEOx" type="815"/>
+      <listitem open="0" id="uuqSmvNYAasyX" type="815"/>
+      <listitem open="0" id="uGtAdH1807d7q" type="815"/>
+     </listitem>
+     <listitem open="0" id="u9OW3atsiacyw" type="813">
+      <listitem open="0" id="uTK8Cd3YjRK65" type="815"/>
+      <listitem open="0" id="uHiP6k3CoSeLz" type="815"/>
+      <listitem open="0" id="uiKvWn4hjp0mJ" type="815"/>
+      <listitem open="0" id="ugu6mK6nubd5T" type="815"/>
+      <listitem open="0" id="uRtP1jxSiVMu5" type="815"/>
+     </listitem>
+     <listitem open="0" id="ulkMzwvPYz9jO" type="813">
+      <listitem open="0" id="uGyHtxDqonx3T" type="815"/>
+      <listitem open="0" id="uqok5ZfD919ii" type="815"/>
+     </listitem>
+     <listitem open="0" id="uy0RiOMzbX8Q9" type="813">
+      <listitem open="0" id="umtjXSDokGMV5" type="815"/>
+      <listitem open="0" id="um2MxmBOQ4Ivx" type="815"/>
+      <listitem open="0" id="uEE9SvmfTDzWF" type="815"/>
+      <listitem open="0" id="uKYHoAcKPgpcY" type="815"/>
+      <listitem open="0" id="u7Jx0Gk4vPi4l" type="815"/>
+     </listitem>
+     <listitem open="0" id="u6L3x3f6fT2Gs" type="813">
+      <listitem open="0" id="uic5pVSNVB9jc" type="815"/>
+      <listitem open="0" id="uJavbB9W7Kenf" type="815"/>
+      <listitem open="0" id="uGrpLqESBfeXO" type="815"/>
+      <listitem open="0" id="u1Xqy2xMfu428" type="815"/>
+      <listitem open="0" id="uNMZAivGDalu5" type="815"/>
+     </listitem>
+     <listitem open="0" id="uXmVndUnPieqG" type="813">
+      <listitem open="0" id="u4KZbz5afOTjn" type="815"/>
+      <listitem open="0" id="u5U6F0ETVcFT6" type="815"/>
+      <listitem open="0" id="uPqAmmbE0eZoW" type="815"/>
+     </listitem>
+     <listitem open="0" id="u6E9UGVjiETPs" type="813">
+      <listitem open="0" id="u65DHcw9vu2pM" type="815"/>
+     </listitem>
+     <listitem open="0" id="uMSTpMxvcNpuj" type="813">
+      <listitem open="0" id="uWR5Poi89vqvx" type="815"/>
+     </listitem>
+     <listitem open="0" id="uObtItlrgfTIx" type="813">
+      <listitem open="0" id="uLVd0MEFE20kK" type="815"/>
+     </listitem>
+     <listitem open="0" id="uhyShL49jdWNO" type="813">
+      <listitem open="0" id="uD0jpLVhluVpI" type="815"/>
+     </listitem>
+     <listitem open="0" id="uD9xFFUL441cl" type="813">
+      <listitem open="0" id="uDHs81HFGbBnF" type="815"/>
+     </listitem>
+     <listitem open="0" id="Datatypes" type="830">
+      <listitem open="1" id="utbFpbz3VMjLX" type="829"/>
+      <listitem open="1" id="uBjJZBvS8of9J" type="829"/>
+      <listitem open="1" id="udwIg4NC9rPZj" type="829"/>
+      <listitem open="1" id="u9n701tnvPSPc" type="829"/>
+      <listitem open="1" id="u0GPy9ZeGeHGd" type="829"/>
+      <listitem open="1" id="ulaJZvpTtKLEH" type="829"/>
+      <listitem open="1" id="uaiDWVykStjZ9" type="829"/>
+      <listitem open="1" id="uZvfd4Ae88e7Q" type="829"/>
+      <listitem open="1" id="uyLQYXGTGaZZ8" type="829"/>
+      <listitem open="1" id="uNoc17Nb1LlHz" type="829"/>
+      <listitem open="1" id="u3zbBzeRjPOJS" type="829"/>
+      <listitem open="1" id="u2gDZPelq6igu" type="829"/>
+      <listitem open="1" id="uaEGvL2IqZd3k" type="829"/>
+      <listitem open="1" id="uxxxNvtYllPd1" type="829"/>
+      <listitem open="1" id="uOnID1msN5xiY" type="829"/>
+      <listitem open="1" id="u5051IYZZSmCl" type="829"/>
+      <listitem open="1" id="uKxosYvqYvnhX" type="829"/>
+      <listitem open="1" id="uZ0craOSwOfqU" type="829"/>
+      <listitem open="1" id="updGpUssomfPP" type="829"/>
+      <listitem open="1" id="upCJJnHLN7xuD" type="829"/>
+      <listitem open="1" id="u54fqA7KakYle" type="829"/>
+      <listitem open="1" id="u50988D6zrZUg" type="829"/>
+      <listitem open="1" id="urTaHQqwoFkd0" type="829"/>
+      <listitem open="1" id="uP3QZEoolNecZ" type="829"/>
+      <listitem open="1" id="u65wUbl9bO0FL" type="829"/>
+     </listitem>
+    </listitem>
+   </listitem>
+  </listview>
+  <codegeneration>
+   <codegenerator language="Python">
+    <sourcecode id="uMnw8hlz0paIg" value="g1=Graph()&#xa;i=0&#xa;j=0&#xa;nombres_fichero=[&quot;imagen1sf.png&quot;,&quot;imagen2sf.png&quot;,&quot;imagen3sf.png&quot;,&#xa;&quot;imagen4sf.png&quot;,&quot;imagen5sf.png&quot;,&quot;imagen6sf.png&quot;]g1.add_vertex()&#xa;g1.add_vertex()&#xa;g1.add_edge(g1.vs[0],g1.vs[1])&#xa;print g1.vs[0].degree()&#xa;print g1.vs[1].degree()&#xa;while i&lt;30:&#xa;  g1.add_vertex()&#xa;  self.preferalAttachment(g1,g1.vs[i+2])&#xa;  self.preferalAttachment(g1,g1.vs[i+2])&#xa;  if(i%5)==0:&#xa;    if i!=0:&#xa;      self.ajustarTamanyo(g1)&#xa;&#xa;    plot(g1,nombres_fichero[j],vertex_label=g1.degree())&#xa;    j+=1&#xa;&#xa;  i+=1&#xa;&#xa;plot(g1,vertex_label=g1.degree())&#xa;"/>
+    <sourcecode id="ubNiIfAqFIcCo" value="fin=0&#xa;grados=grafo.degree()&#xa;sum_grados=np.sum(grados)&#xa;dist_prob=[]&#xa;for v in grafo.vs:&#xa;  dist_prob.append(v.degree()/float(sum_grados))&#xa;&#xa;aleat=np.random.choice(grafo.vs,p=dist_prob)&#xa;while fin!=1:&#xa;  if nodo==aleat:&#xa;    aleat=np.random.choice(grafo.vs)&#xa;    break&#xa;&#xa;  ejes1=grafo.es.select(_source=aleat.index)&#xa;  ejes2=grafo.es.select(_source=aleat.index)&#xa;  flag=0&#xa;  for e in ejes1:&#xa;    flag=e in grafo.es.select(_source=nodo.index)&#xa;    if flag:&#xa;      break&#xa;&#xa;&#xa;  if flag:&#xa;    continue&#xa;&#xa;  else:&#xa;    fin=1&#xa;&#xa;&#xa;grafo.add_edge(nodo,aleat)&#xa;"/>
+    <sourcecode id="uMn9Yq09foQAb" value="grados=sorted(grafo.degree())&#xa;mayor=round(np.percentile(grados,75))&#xa;media=round(np.percentile(grados,50))&#xa;menor=round(np.percentile(grados,25))&#xa;for v in VertexSeq(grafo):&#xa;  if v.degree()>mayor:&#xa;    v['size']=60&#xa;&#xa;  elif v.degree()>media:&#xa;    v['size']=40&#xa;&#xa;  elif v.degree()>menor:&#xa;    v['size']=25&#xa;&#xa;  else:&#xa;    v['size']=15&#xa;&#xa;&#xa;"/>
+    <sourcecode id="uDHs81HFGbBnF" value="tam=10**2&#xa;tiempo=10&#xa;beta=0.8&#xa;gamma=0.007&#xa;resultados=[]&#xa;resultados.append(FuncionesNucleo().simulacionColores(ModeloXSIR,&#xa;&quot;Scale_Free&quot;,tam_grafo=tam,susceptibles=tam*0.5,n_infectados=3,time=tiempo,beta=beta,gamma=gamma,runs=1))"/>
+    <sourcecode id="uAHY2qwCb3hnO" value="g1=Graph.Ring(50)&#xa;i=1&#xa;for v in VertexSeq(g1):&#xa;  v['name']=&quot;%d&quot;%i&#xa;  i+=1&#xa;&#xa;i=1&#xa;while i&lt;49:&#xa;  g1.add_edge(&quot;%d&quot;%i,&quot;%d&quot;%(i+2))&#xa;  i+=1&#xa;&#xa;g1.add_edge('49','1')&#xa;g1.add_edge('50','2')&#xa;layout=g1.layout_circle&#xa;plot(g1,&quot;imagen1sw.png&quot;,vertex_label=g1.degree())&#xa;for v in VertexSeq(g1):&#xa;  if random.random()&lt;0.5:&#xa;    g1.delete_edges(random.choice(g1.es.select(v.index)).index)&#xa;    aleatorio=int(round(random.uniform(0,19),0))&#xa;    while aleatorio==v.index:&#xa;      aleatorio=int(round(random.uniform(0,20),0))&#xa;&#xa;    g1.add_edge(v.index,aleatorio)&#xa;&#xa;&#xa;self.ajustarTamanyo(g1)&#xa;plot(g1,&quot;imagen2sw.png&quot;,vertex_label=g1.degree())&#xa;for v in VertexSeq(g1):&#xa;  if random.random()&lt;0.5:&#xa;    g1.delete_edges(random.choice(g1.es.select(v.index)).index)&#xa;    aleatorio=int(round(random.uniform(0,19),0))&#xa;    while aleatorio==v.index:&#xa;      aleatorio=int(round(random.uniform(0,20),0))&#xa;&#xa;    g1.add_edge(v.index,aleatorio)&#xa;&#xa;&#xa;self.ajustarTamanyo(g1)&#xa;plot(g1,&quot;imagen3sw.png&quot;,vertex_label=g1.degree())&#xa;plot(g1,vertex_label=g1.degree())&#xa;"/>
+    <sourcecode id="uOdMd6EWiOg0s" value="grados=sorted(grafo.degree())&#xa;mayor=round(np.percentile(grados,75))&#xa;media=round(np.percentile(grados,50))&#xa;menor=round(np.percentile(grados,25))&#xa;for v in VertexSeq(grafo):&#xa;  if v.degree()>mayor:&#xa;    v['color']='cyan'&#xa;    v['size']=60&#xa;&#xa;  elif v.degree()>media:&#xa;    v['color']='yellow'&#xa;    v['size']=40&#xa;&#xa;  elif v.degree()>menor:&#xa;    v['color']='green'&#xa;    v['size']=25&#xa;&#xa;  else:&#xa;    v['color']='red'&#xa;    v['size']=15&#xa;&#xa;&#xa;"/>
+    <sourcecode id="uzzOFpfHtcUfn" value="self.comps=list(comps)&#xa;self.n=grafo.vcount()&#xa;first_comp=self.comps[0]&#xa;self.states=[first_comp]*self.n&#xa;self.compartimentos=dict()&#xa;for code in comps:&#xa;  self.compartimentos[code]=set()&#xa;&#xa;self.compartimentos[first_comp].update(xrange(self.n))&#xa;"/>
+    <sourcecode id="ua4phvy7doOjy" value="return self.compartimentos[comp]&#xa;"/>
+    <sourcecode id="upj741AY3wpap" value="return self.states[vertice]&#xa;"/>
+    <sourcecode id="uV6rQMKcekWQM" value="self.compartimentos[self.states[vertice]].remove(vertice)&#xa;self.states[vertice]=comp&#xa;self.compartimentos[comp].add(vertice)&#xa;"/>
+    <sourcecode id="unuQja61e21IC" value="for vertex in vertices:&#xa;  self.move_vertice(vertex,code)&#xa;&#xa;"/>
+    <sourcecode id="uAaVkD205iYDH" value="return len(self.compartimentos[code])/float(self.n)"/>
+    <sourcecode id="uw6ew97U6NtV2" value="if tipo==&quot;Erdos_Renyi&quot;:&#xa;  grafo=Graph.Erdos_Renyi(n,m=2*n)&#xa;&#xa;elif tipo==&quot;Lattice&quot;:&#xa;  dim=[int(n**0.5),int(n**0.5)]&#xa;  grafo=Graph.Lattice(dim)&#xa;&#xa;elif tipo==&quot;Grafo_Aleatorio&quot;:&#xa;  r=2/((n-1)*pi)**0.5&#xa;  grafo=Graph.GRG(n,r)&#xa;&#xa;elif tipo==&quot;Scale_Free&quot;:&#xa;  grafo=Graph.Barabasi(n,2,power=2.2)&#xa;&#xa;elif tipo==&quot;Small_Worlds&quot;:&#xa;  grafo=Graph.Watts_Strogatz(1,n,2,p)&#xa;&#xa;else:&#xa;  raise ValueError(&quot;No soportamos ese tipo de grafo.&quot;)&#xa;&#xa;if conectado and not grafo.is_connected():&#xa;  grafo=grafo.clusters().giant()&#xa;&#xa;return grafo&#xa;"/>
+    <sourcecode id="uoFuWcjPX22jz" value="results=[]&#xa;if susceptibles==10000:&#xa;  susceptibles=tam_grafo&#xa;&#xa;for i in xrange(runs):&#xa;  current_run=[]&#xa;  grafo=self.generaGrafo(tipo_grafo,n=tam_grafo)&#xa;  model=modelo(grafo,*args,**kwds)&#xa;  if susceptibles!=tam_grafo:&#xa;    s=random.sample(range(grafo.vcount()),susceptibles)&#xa;    model.compartimentos.move_vertices(s,&quot;S&quot;)&#xa;&#xa;  infectados=random.sample(range(grafo.vcount()),infectados)&#xa;  model.compartimentos.move_vertices(infectados,&quot;I&quot;)&#xa;  for t in xrange(time):&#xa;    model.step()&#xa;    p_infectados=model.compartimentos.tam_relativo(&quot;I&quot;)&#xa;    current_run.append(p_infectados)&#xa;&#xa;  results.append(current_run)&#xa;  return results&#xa;&#xa;"/>
+    <sourcecode id="u95pbAMRPtVrC" value="results=[]&#xa;if susceptibles==10000:&#xa;  susceptibles=tam_grafo&#xa;&#xa;for i in xrange(runs):&#xa;  current_run=[]&#xa;  n_infectados=num_infectados&#xa;  print&quot;Ronda %d&quot;%i&#xa;  grafo=self.generaGrafo(tipo_grafo,n=tam_grafo)&#xa;  model=modelo(grafo,*args,**kwds)&#xa;  if susceptibles!=tam_grafo:&#xa;    s=random.sample(range(grafo.vcount()),susceptibles)&#xa;    model.compartimentos.move_vertices(s,&quot;S&quot;)&#xa;&#xa;  hubs=[]&#xa;  infectados=[]&#xa;  j=0&#xa;  while n_infectados>len(hubs):&#xa;    for v in grafo.vs.select(_degree=(grafo.maxdegree()-j)):&#xa;      hubs.append(v.index)&#xa;&#xa;    if len(hubs)==1:&#xa;      infectados.append(hubs[0])&#xa;&#xa;    else:&#xa;      if len(hubs)>n_infectados:&#xa;        print&quot;[A]&quot;&#xa;        infectados=infectados+random.sample(hubs,&#xa;        n_infectados)print infectados&#xa;&#xa;      else:&#xa;        infectados=infectados+random.sample(hubs,len(hubs))&#xa;&#xa;&#xa;    n_infectados=n_infectados-len(hubs)&#xa;    j+=1&#xa;&#xa;  print infectados&#xa;  model.compartimentos.move_vertices(infectados,&quot;I&quot;)&#xa;  for t in xrange(time):&#xa;    model.step()&#xa;    p_infectados=model.compartimentos.tam_relativo(&quot;I&quot;)&#xa;    current_run.append(p_infectados)&#xa;&#xa;  results.append(current_run)&#xa;&#xa;return results&#xa;"/>
+    <sourcecode id="ueWl9zkZ8FMpm" value="results=[]&#xa;if susceptibles==10000:&#xa;  susceptibles=tam_grafo&#xa;&#xa;for i in xrange(runs):&#xa;  print&quot;Ronda %d&quot;%i&#xa;  current_run=[]&#xa;  grafo=self.generaGrafo(tipo_grafo,n=tam_grafo)&#xa;  model=modelo(grafo,*args,**kwds)&#xa;  if susceptibles!=tam_grafo:&#xa;    s=random.sample(range(grafo.vcount()),susceptibles)&#xa;    model.compartimentos.move_vertices(s,&quot;S&quot;)&#xa;&#xa;  hubs=[]&#xa;  infectados=[]&#xa;  j=1&#xa;  while n_infectados>len(hubs):&#xa;    for v in grafo.vs.select(_degree=j):&#xa;      hubs.append(v.index)&#xa;&#xa;    if len(hubs)==1:&#xa;      infectados.append(hubs[0])&#xa;&#xa;    else:&#xa;      if len(hubs)>n_infectados:&#xa;        infectados=infectados+random.sample(hubs,&#xa;        n_infectados)&#xa;      else:&#xa;        infectados=infectados+random.sample(hubs,len(hubs))&#xa;&#xa;&#xa;    n_infectados=n_infectados-len(hubs)&#xa;    j+=1&#xa;&#xa;  model.compartimentos.move_vertices(infectados,&quot;I&quot;)&#xa;  for t in xrange(time):&#xa;    model.step()&#xa;    p_infectados=model.compartimentos.tam_relativo(&quot;I&quot;)&#xa;    current_run.append(p_infectados)&#xa;&#xa;  results.append(current_run)&#xa;&#xa;return results&#xa;"/>
+    <sourcecode id="uUWgJh2V6am8f" value="results=[]&#xa;for i in xrange(runs):&#xa;  current_run=[]&#xa;  grafo=self.generaGrafo(tipo_grafo,n=tam_grafo)&#xa;  model=modelo(grafo,*args,**kwds)&#xa;  if susceptibles!=tam_grafo:&#xa;    s=random.sample(range(grafo.vcount()),susceptibles)&#xa;    model.compartimentos.move_vertices(s,&quot;S&quot;)&#xa;&#xa;  infectados=random.sample(range(grafo.vcount()),infectados)&#xa;  for i in infectados:&#xa;    if model.compartimentos.get_state(i)==&quot;S&quot;:&#xa;      model.compartimentos.move_vertice(i,&quot;I&quot;)&#xa;&#xa;&#xa;  for t in xrange(time):&#xa;    if t&lt;=5:&#xa;      model.stepInteligente()&#xa;&#xa;    else:&#xa;      model.step()&#xa;&#xa;    p_infectados=model.compartimentos.tam_relativo(&quot;I&quot;)&#xa;    current_run.append(p_infectados)&#xa;&#xa;  results.append(current_run)&#xa;&#xa;return results&#xa;"/>
+    <sourcecode id="uaeVQurLYKeD7" value="results=[]&#xa;if susceptibles==10000:&#xa;  susceptibles=tam_grafo&#xa;&#xa;for i in xrange(runs):&#xa;  current_run=[]&#xa;  grafo=self.generaGrafo(tipo_grafo,n=tam_grafo)&#xa;  model=modelo(grafo,*args,**kwds)&#xa;  if susceptibles!=tam_grafo:&#xa;    s=random.sample(range(grafo.vcount()),susceptibles)&#xa;    model.compartimentos.move_vertices(s,&quot;S&quot;)&#xa;&#xa;  print&quot;Vertices grafo: %d&quot;%grafo.vcount()&#xa;  print&quot;Infectados: %d&quot;%n_infectados&#xa;  infectados=random.sample(range(grafo.vcount()),n_infectados)&#xa;  for i in infectados:&#xa;    if model.compartimentos.get_state(i)==&quot;S&quot;:&#xa;      model.compartimentos.move_vertice(i,&quot;I&quot;)&#xa;&#xa;&#xa;  for t in xrange(time):&#xa;    model.stepInteligente2(beta)&#xa;    p_infectados=model.compartimentos.tam_relativo(&quot;I&quot;)&#xa;    current_run.append(p_infectados)&#xa;&#xa;  results.append(current_run)&#xa;&#xa;return results&#xa;"/>
+    <sourcecode id="umSafxf6iNcWb" value="results=[]&#xa;if susceptibles==10000:&#xa;  susceptibles=tam_grafo&#xa;&#xa;for i in xrange(runs):&#xa;  current_run=[]&#xa;  grafo=self.generaGrafo(tipo_grafo,n=tam_grafo)&#xa;  model=modelo(grafo,*args,**kwds)&#xa;  if susceptibles!=tam_grafo:&#xa;    s=random.sample(range(grafo.vcount()),int(susceptibles))&#xa;    model.compartimentos.move_vertices(s,&quot;S&quot;)&#xa;&#xa;  infectados=random.sample(range(grafo.vcount()),n_infectados)&#xa;  for i in infectados:&#xa;    if model.compartimentos.get_state(i)==&quot;S&quot;:&#xa;      model.compartimentos.move_vertice(i,&quot;I&quot;)&#xa;&#xa;&#xa;  for id in model.compartimentos.compartimentos['I']:&#xa;    grafo.vs[id]['color']='black'&#xa;&#xa;  for t in xrange(7):&#xa;    model.step()&#xa;    if(t%2)==0:&#xa;      for id in model.compartimentos.compartimentos['X']:&#xa;        grafo.vs[id]['color']='grey'&#xa;&#xa;      for id in model.compartimentos.compartimentos['S']:&#xa;        grafo.vs[id]['color']='yellow'&#xa;&#xa;      for id in model.compartimentos.compartimentos['I']:&#xa;        if grafo.vs[id]['color']!='black':&#xa;          grafo.vs[id]['color']='red'&#xa;&#xa;&#xa;      for id in model.compartimentos.compartimentos['R']:&#xa;        grafo.vs[id]['color']='green'&#xa;&#xa;      fichero=&quot;simulacion5_&quot;+&quot;%d&quot;%t+&quot;.png&quot;&#xa;      plot(grafo,fichero)&#xa;&#xa;&#xa;  model.beta=0.7&#xa;  model.gamma=0.5&#xa;  for t in xrange(8,15):&#xa;    model.step()&#xa;    if(t%2)==0:&#xa;      for id in model.compartimentos.compartimentos['X']:&#xa;        grafo.vs[id]['color']='grey'&#xa;&#xa;      for id in model.compartimentos.compartimentos['S']:&#xa;        grafo.vs[id]['color']='yellow'&#xa;&#xa;      for id in model.compartimentos.compartimentos['I']:&#xa;        if grafo.vs[id]['color']!='black':&#xa;          grafo.vs[id]['color']='red'&#xa;&#xa;&#xa;      for id in model.compartimentos.compartimentos['R']:&#xa;        grafo.vs[id]['color']='green'&#xa;&#xa;      fichero=&quot;Figuras/simulacion5_&quot;+&quot;%d&quot;%t+&quot;.png&quot;&#xa;      plot(grafo,fichero)&#xa;&#xa;&#xa;&#xa;return results&#xa;"/>
+    <sourcecode id="unhCxwKvNHqwg" value="results=[]&#xa;if susceptibles==10000:&#xa;  susceptibles=tam_grafo&#xa;&#xa;for i in xrange(runs):&#xa;  current_run=[]&#xa;  grafo=self.generaGrafo(tipo_grafo,n=tam_grafo)&#xa;  model=modelo(grafo,*args,**kwds)&#xa;  if susceptibles!=tam_grafo:&#xa;    s=random.sample(range(grafo.vcount()),int(susceptibles))&#xa;    model.compartimentos.move_vertices(s,&quot;S&quot;)&#xa;&#xa;  infectados=random.random(range(grafo.vcount()))&#xa;  for i in infectados:&#xa;    if model.compartimentos.get_state(i)==&quot;S&quot;:&#xa;      model.compartimentos.move_vertice(i,&quot;I&quot;)&#xa;&#xa;&#xa;  for t in xrange(time):&#xa;    model.step()&#xa;    p_infectados=model.compartimentos.tam_relativo(&quot;I&quot;)&#xa;    current_run.append(p_infectados)&#xa;&#xa;  results.append(current_run)&#xa;  return results&#xa;&#xa;"/>
+    <sourcecode id="uhM6KHn4hcNAk" value="for r in results:&#xa;  print r&#xa;  averaged=[mean(items)for items in izip(*r)]&#xa;  args=[]&#xa;  for row in r:&#xa;    args+=[row,'k-']&#xa;&#xa;  args+=[averaged,color]&#xa;  pylab.plot(*args)&#xa;&#xa;"/>
+    <sourcecode id="uOM0zKhetOq8g" value="for beta in betas:&#xa;  results=self.simulacion(modelo,tipo,100,beta=beta,*args,&#xa;  **kwds)self.plot_results(results,'r-o')&#xa;  pylab.show()&#xa;  media=mean(run[-1]for run in results)&#xa;  print(&quot;Beta: %.2f  Media: %.4f&quot;%(beta,media))"/>
+    <sourcecode id="unncHkRW56C67" value="self.grafo=grafo&#xa;self.compartimentos=Compartimentos(grafo,codes)&#xa;self.reset()&#xa;"/>
+    <sourcecode id="uGtAdH1807d7q" value="return[self.compartimentos.tam_relativo(cmp)&#xa;for cmp in self.compartimentos.cmps]"/>
+    <sourcecode id="uHjYU8JnEobX3" value="raise NotImplementedError&#xa;"/>
+    <sourcecode id="uuqSmvNYAasyX" value="raise NotImplementedError&#xa;"/>
+    <sourcecode id="uNyxPQLkKMEOx" value="for i in xrange(n):&#xa;  self.step()"/>
+    <sourcecode id="uTK8Cd3YjRK65" value="ModeloCompartimental.__init__(self,graph,&quot;SIR&quot;)&#xa;self.beta=float(beta)&#xa;self.gamma=float(gamma)&#xa;"/>
+    <sourcecode id="uHiP6k3CoSeLz" value="vs=xrange(self.grafo.vcount())&#xa;self.compartimentos.move_vertices(vs,&quot;S&quot;)&#xa;"/>
+    <sourcecode id="uiKvWn4hjp0mJ" value="for v in self.compartimentos[&quot;I&quot;].copy():&#xa;  neis=self.grafo.neighbors(v)&#xa;  for nei in muestraAleatoria(neis,self.beta):&#xa;    if self.compartimentos.get_state(nei)==&quot;S&quot;:&#xa;      self.compartimentos.move_vertice(nei,&quot;I&quot;)&#xa;&#xa;&#xa;&#xa;i_to_r=muestraAleatoria(self.compartimentos[&quot;I&quot;],self.gamma)&#xa;print self.compartimentos[&quot;I&quot;]&#xa;print&quot;i_to_r&quot;&#xa;print i_to_r&#xa;self.compartimentos.move_vertices(i_to_r,&quot;R&quot;)&#xa;"/>
+    <sourcecode id="ugu6mK6nubd5T" value="s_to_i=set()&#xa;g_medio=mean(self.grafo.degree())//1&#xa;for v in self.compartimentos[&quot;I&quot;]:&#xa;  neis=self.grafo.neighbors(v)&#xa;  s_to_i.update([nodo for nodo in neis if&#xa;  self.grafo.vs[nodo].degree()>g_medio])&#xa;self.compartimentos.move_vertices(s_to_i,&quot;I&quot;)&#xa;i_to_r=muestraAleatoria(self.compartimentos[&quot;I&quot;],self.gamma)&#xa;self.compartimentos.move_vertices(i_to_r,&quot;R&quot;)&#xa;"/>
+    <sourcecode id="uRtP1jxSiVMu5" value="s_to_i=set()&#xa;g_medio=mean(self.grafo.degree())//1&#xa;for v in self.compartimentos[&quot;I&quot;]:&#xa;  neis=self.grafo.neighbors(v)&#xa;  s_to_i.update([nodo for nodo in neis if&#xa;  ((self.grafo.vs[nodo].degree()&lt;g_medio)and(random.random()&lt;beta))])&#xa;self.compartimentos.move_vertices(s_to_i,&quot;I&quot;)&#xa;i_to_r=muestraAleatoria(self.compartimentos[&quot;I&quot;],self.gamma)&#xa;self.compartimentos.move_vertices(i_to_r,&quot;R&quot;)"/>
+    <sourcecode id="uGyHtxDqonx3T" value="ModeloSIR.__init__(self,graph,beta,gamma)&#xa;self.lambda_=float(lambda_)&#xa;"/>
+    <sourcecode id="uqok5ZfD919ii" value="r_to_s=muestraAleatoria(self.compartimentos[&quot;R&quot;],self.lambda_)&#xa;self.compartimentos.move_vertices(r_to_s,&quot;S&quot;)&#xa;ModeloSIR.step(self)"/>
+    <sourcecode id="umtjXSDokGMV5" value="ModeloCompartimental.__init__(self,g,&quot;SI&quot;)&#xa;self.beta=float(beta)&#xa;self.gamma=float(gamma)&#xa;"/>
+    <sourcecode id="um2MxmBOQ4Ivx" value="vs=xrange(self.grafo.vcount())&#xa;self.compartimentos.move_vertices(vs,&quot;S&quot;)&#xa;"/>
+    <sourcecode id="uEE9SvmfTDzWF" value="s_to_i=set()&#xa;for v in self.compartimentos[&quot;I&quot;]:&#xa;  neis=self.grafo.neighbors(v)&#xa;  s_to_i.update(muestraAleatoria(neis,self.beta))&#xa;&#xa;self.compartimentos.move_vertices(s_to_i,&quot;I&quot;)&#xa;i_to_s=muestraAleatoria(self.compartimentos[&quot;I&quot;],self.gamma)&#xa;self.compartimentos.move_vertices(i_to_s,&quot;S&quot;)&#xa;"/>
+    <sourcecode id="uKYHoAcKPgpcY" value="s_to_i=set()&#xa;g_medio=mean(self.grafo.degree())//1&#xa;for v in self.compartimentos[&quot;I&quot;]:&#xa;  neis=self.grafo.neighbors(v)&#xa;  s_to_i.update([nodo for nodo in neis if&#xa;  self.grafo.vs[nodo].degree()>g_medio])&#xa;self.compartimentos.move_vertices(s_to_i,&quot;I&quot;)&#xa;i_to_s=muestraAleatoria(self.compartimentos[&quot;I&quot;],self.gamma)&#xa;self.compartimentos.move_vertices(i_to_s,&quot;S&quot;)&#xa;"/>
+    <sourcecode id="u7Jx0Gk4vPi4l" value="s_to_i=set()&#xa;g_medio=mean(self.grafo.degree())//1&#xa;for v in self.compartimentos[&quot;I&quot;]:&#xa;  neis=self.grafo.neighbors(v)&#xa;  s_to_i.update([nodo for nodo in neis if&#xa;  ((self.grafo.vs[nodo].degree()&lt;g_medio)and(random.random()&lt;beta))])&#xa;self.compartimentos.move_vertices(s_to_i,&quot;I&quot;)&#xa;i_to_s=muestraAleatoria(self.compartimentos[&quot;I&quot;],self.gamma)&#xa;self.compartimentos.move_vertices(i_to_s,&quot;S&quot;)"/>
+    <sourcecode id="uic5pVSNVB9jc" value="ModeloCompartimental.__init__(self,graph,&quot;XSIR&quot;)&#xa;self.beta=float(beta)&#xa;self.gamma=float(gamma)&#xa;"/>
+    <sourcecode id="uJavbB9W7Kenf" value="vs=xrange(self.grafo.vcount())&#xa;self.compartimentos.move_vertices(vs,&quot;X&quot;)&#xa;"/>
+    <sourcecode id="uGrpLqESBfeXO" value="for v in self.compartimentos[&quot;I&quot;].copy():&#xa;  neis=self.grafo.neighbors(v)&#xa;  for nei in muestraAleatoria(neis,self.beta):&#xa;    if self.compartimentos.get_state(nei)==&quot;S&quot;:&#xa;      self.compartimentos.move_vertice(nei,&quot;I&quot;)&#xa;&#xa;&#xa;&#xa;i_to_r=muestraAleatoria(self.compartimentos[&quot;I&quot;],self.gamma)&#xa;print self.compartimentos[&quot;I&quot;]&#xa;print&quot;i_to_r&quot;&#xa;print i_to_r&#xa;self.compartimentos.move_vertices(i_to_r,&quot;R&quot;)&#xa;"/>
+    <sourcecode id="u1Xqy2xMfu428" value="s_to_i=set()&#xa;g_medio=mean(self.grafo.degree())//1&#xa;for v in self.compartimentos[&quot;I&quot;]:&#xa;  neis=self.grafo.neighbors(v)&#xa;  s_to_i.update([nodo for nodo in neis if&#xa;  self.grafo.vs[nodo].degree()>g_medio])&#xa;self.compartimentos.move_vertices(s_to_i,&quot;I&quot;)&#xa;i_to_r=muestraAleatoria(self.compartimentos[&quot;I&quot;],self.gamma)&#xa;self.compartimentos.move_vertices(i_to_r,&quot;R&quot;)&#xa;"/>
+    <sourcecode id="uNMZAivGDalu5" value="s_to_i=set()&#xa;g_medio=mean(self.grafo.degree())//1&#xa;for v in self.compartimentos[&quot;I&quot;]:&#xa;  neis=self.grafo.neighbors(v)&#xa;  s_to_i.update([nodo for nodo in neis if&#xa;  ((self.grafo.vs[nodo].degree()&lt;g_medio)and(random.random()&lt;beta))])&#xa;self.compartimentos.move_vertices(s_to_i,&quot;I&quot;)&#xa;i_to_r=muestraAleatoria(self.compartimentos[&quot;I&quot;],self.gamma)&#xa;self.compartimentos.move_vertices(i_to_r,&quot;R&quot;)"/>
+    <sourcecode id="u5U6F0ETVcFT6" value="ficheros=[&quot;imagen1SW_p.png&quot;,&quot;imagen2SW_p.png&quot;,&#xa;&quot;imagen3SW_p.png&quot;]probs=[0,0.1,1]&#xa;i=0&#xa;for f in ficheros:&#xa;  self.generaGrafo(f,probs[i])&#xa;  i+=1&#xa;&#xa;"/>
+    <sourcecode id="uPqAmmbE0eZoW" value="for v in VertexSeq(g1):&#xa;  if random.random()&lt;p:&#xa;    g1.delete_edges(random.choice(g1.es.select(v.index)).index)&#xa;    aleatorio=int(round(random.uniform(0,19),0))&#xa;    while aleatorio==v.index:&#xa;      aleatorio=int(round(random.uniform(0,20),0))&#xa;&#xa;    g1.add_edge(v.index,aleatorio)&#xa;&#xa;&#xa;"/>
+    <sourcecode id="u4KZbz5afOTjn" value="g1=Graph.Ring(50)&#xa;i=1&#xa;for v in VertexSeq(g1):&#xa;  v['name']=&quot;%d&quot;%i&#xa;  i+=1&#xa;&#xa;i=1&#xa;while i&lt;49:&#xa;  g1.add_edge(&quot;%d&quot;%i,&quot;%d&quot;%(i+2))&#xa;  i+=1&#xa;&#xa;g1.add_edge('49','1')&#xa;g1.add_edge('50','2')&#xa;i=0&#xa;while i&lt;3:&#xa;  self.rondaWatts(g1,p)&#xa;  i+=1&#xa;&#xa;plot(g1,fichero)&#xa;"/>
+    <sourcecode id="u65DHcw9vu2pM" value="tam=[100,1000,5000,10000,25000,50000,100000,1000000]&#xa;tiempo=10&#xa;beta=0.025&#xa;gamma=0.01&#xa;resultados=[]&#xa;for s in tam:&#xa;  print s&#xa;  if s!=1000000:&#xa;    aux=FuncionesNucleo().simulacion(ModeloSIR,&quot;Scale_Free&quot;,&#xa;    tam_grafo=s,time=tiempo,beta=beta,gamma=gamma)media=[mean(items)for items in izip(*aux)]&#xa;    print media&#xa;    while abs(mean(media))-0.1&lt;0:&#xa;      aux=FuncionesNucleo().simulacion(ModeloSIR,&quot;Scale_Free&quot;,&#xa;      tam_grafo=s,time=tiempo,beta=beta,gamma=gamma)media=[mean(items)for items in izip(*aux)]&#xa;&#xa;    resultados.append(aux)&#xa;&#xa;  else:&#xa;    aux=FuncionesNucleo().simulacion(ModeloSIR,&quot;Scale_Free&quot;,&#xa;    tam_grafo=s,runs=1,time=tiempo,beta=beta,gamma=gamma)media=[mean(items)for items in izip(*aux)]&#xa;    while abs(mean(media))-0.1&lt;0:&#xa;      aux=FuncionesNucleo().simulacion(ModeloSIR,&#xa;      &quot;Scale_Free&quot;,tam_grafo=s,time=tiempo,beta=beta,gamma=gamma)media=[mean(items)for items in izip(*aux)]&#xa;&#xa;    resultados.append(aux)&#xa;&#xa;&#xa;tiempo=range(tiempo)&#xa;averaged=[mean(items)for items in izip(*resultados[0])]&#xa;averaged2=[mean(items)for items in izip(*resultados[1])]&#xa;averaged3=[mean(items)for items in izip(*resultados[2])]&#xa;averaged4=[mean(items)for items in izip(*resultados[3])]&#xa;averaged5=[mean(items)for items in izip(*resultados[4])]&#xa;averaged6=[mean(items)for items in izip(*resultados[5])]&#xa;averaged7=[mean(items)for items in izip(*resultados[6])]&#xa;averaged8=[mean(items)for items in izip(*resultados[7])]&#xa;plt.plot(tiempo,averaged,'r',label='n = 100')&#xa;plt.plot(tiempo,averaged2,'b',label='n = 1000')&#xa;plt.plot(tiempo,averaged3,'g',label='n = 5000')&#xa;plt.plot(tiempo,averaged4,'fuchsia',label='n = 10000')&#xa;plt.plot(tiempo,averaged5,'black',label='n = 25000')&#xa;plt.plot(tiempo,averaged6,'greenyellow',label='n = 50000')&#xa;plt.plot(tiempo,averaged7,'cyan',label='n = 1000000')&#xa;plt.plot(tiempo,averaged8,'brown',label='n = 10000000')&#xa;plt.legend(title=&quot;Numero de nodos del grafo&quot;)&#xa;plt.title(&quot;Proporcion de infectados a lo largo de 100u de tiempo.&quot;)&#xa;plt.savefig('Figuras/simulacion1.png')&#xa;"/>
+    <sourcecode id="uWR5Poi89vqvx" value="tam=100000&#xa;tiempo=10&#xa;beta=0.025&#xa;gamma=0.01&#xa;resultados=[]&#xa;print&quot;Simulacion 1&quot;&#xa;resultados.append(FuncionesNucleo().simulacionHub(ModeloSIR,&#xa;&quot;Scale_Free&quot;,tam_grafo=tam,susceptibles=tam,time=tiempo,beta=beta,gamma=gamma))print&quot;Simulacion 2&quot;&#xa;resultados.append(&#xa;FuncionesNucleo().simulacionAntiHub(ModeloSIR,&quot;Scale_Free&quot;,tam_grafo=tam,susceptibles=tam,time=tiempo,beta=beta,gamma=gamma))tiempo=range(tiempo)&#xa;averaged=[mean(items)for items in izip(*resultados[0])]&#xa;averaged2=[mean(items)for items in izip(*resultados[1])]&#xa;plt.plot(tiempo,averaged,'r',&#xa;label='Infeccion iniciada en un hub')plt.plot(tiempo,averaged2,'b',&#xa;label='Infeccion no iniciada en un hub')plt.legend(title=&quot;Hubs vs nodos normales&quot;)&#xa;plt.title(&quot;Proporcion de infectados a lo largo de 100u de tiempo.&quot;)&#xa;plt.savefig('Figuras/simulacion2.png')&#xa;"/>
+    <sourcecode id="uLVd0MEFE20kK" value="tam=10**5&#xa;tiempo=10&#xa;beta=0.025&#xa;gamma=0.01&#xa;resultados=[]&#xa;resultados.append(FuncionesNucleo().simulacionInteligente(ModeloSIR,&#xa;&quot;Scale_Free&quot;,tam_grafo=tam,susceptibles=tam,time=tiempo,beta=beta,gamma=gamma))t=range(tiempo)&#xa;averaged=[mean(items)for items in izip(*resultados[0])]&#xa;plt.plot(t,averaged,'r',label='Infeccion inteligente')&#xa;resultados.append(FuncionesNucleo().simulacion(ModeloSIR,&#xa;&quot;Scale_Free&quot;,tam_grafo=tam,susceptibles=tam,time=tiempo,beta=beta,gamma=gamma))t=range(tiempo)&#xa;averaged2=[mean(items)for items in izip(*resultados[1])]&#xa;plt.plot(t,averaged2,'b',label='Infeccion aleatoria')&#xa;plt.title(&quot;Proporcion de infectados a lo largo de 300u de tiempo.&quot;)&#xa;plt.legend()&#xa;plt.savefig('Figuras/simulacion3.png')&#xa;"/>
+    <sourcecode id="uD0jpLVhluVpI" value="tam=10**5&#xa;tiempo=10&#xa;beta=0.025&#xa;gamma=0.01&#xa;resultados=[]&#xa;resultados.append(FuncionesNucleo().simulacionInteligente2(ModeloSIR,&#xa;&quot;Scale_Free&quot;,tam_grafo=tam,susceptibles=tam,time=tiempo,beta=beta,gamma=gamma))t=range(tiempo)&#xa;averaged=[mean(items)for items in izip(*resultados[0])]&#xa;plt.plot(t,averaged,'r',label='Infeccion inteligente')&#xa;resultados.append(FuncionesNucleo().simulacion(ModeloSIR,&quot;Scale_Free&quot;,&#xa;tam_grafo=tam,susceptibles=tam,time=tiempo,beta=beta,gamma=gamma))t=range(tiempo)&#xa;averaged2=[mean(items)for items in izip(*resultados[1])]&#xa;plt.plot(t,averaged2,'b',label='Infeccion aleatoria')&#xa;plt.title(&quot;Proporcion de infectados a lo largo de 100u de tiempo.&quot;)&#xa;plt.legend()&#xa;plt.savefig('Figuras/simulacion4.png')&#xa;"/>
+   </codegenerator>
+  </codegeneration>
+ </XMI.extensions>
+</XMI>
