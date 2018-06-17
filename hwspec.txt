@@ -1,0 +1,3 @@
+Intel(R) Core(TM) i5 CPU M 480  @ 2.67GHz, 2 Nucleos
+4GB DDR2
+Ubuntu 18.04 LTS (Bionic Beaver)

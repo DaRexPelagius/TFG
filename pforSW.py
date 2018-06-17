@@ -10,7 +10,7 @@ class pforSW(object):
     def main(self):
         ficheros = ["imagen1SW_p.png", "imagen2SW_p.png",
                                        "imagen3SW_p.png"]
-        probs = [0, 0.25, 1]
+        probs = [0, 0.1, 1]
         i = 0
         for f in ficheros:
             self.generaGrafo(f, probs[i])

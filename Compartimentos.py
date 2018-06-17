@@ -9,17 +9,17 @@ class Compartimentos(object):
         first_comp = self.comps[0]
         self.states = [first_comp] * self.n
 
-        self.compartments = dict()
+        self.compartimentos = dict()
         for code in comps:
-            self.compartments[code] = set()
-        self.compartments[first_comp].update(xrange(self.n))
+            self.compartimentos[code] = set()
+        self.compartimentos[first_comp].update(xrange(self.n))
 
 
     def __getitem__(self, comp):
         """Devuelve el compartimento asociado
         al codigo comp."""
         
-        return self.compartments[comp]
+        return self.compartimentos[comp]
 
     def get_state(self, vertice):
         """Devuelve el codigo del compartimento
@@ -28,9 +28,9 @@ class Compartimentos(object):
 
     def move_vertice(self, vertice, comp):
         """Cambia el vertice de compartimento"""
-        self.compartments[self.states[vertice]].remove(vertice)
+        self.compartimentos[self.states[vertice]].remove(vertice)
         self.states[vertice] = comp
-        self.compartments[comp].add(vertice)
+        self.compartimentos[comp].add(vertice)
 
     def move_vertices(self, vertices, code):
         """ Moves multiple vertices from their current compartment
@@ -41,7 +41,7 @@ class Compartimentos(object):
     def tam_relativo(self, code):
         """ Returns the relative size of the compartment with
         the given 'code'."""
-        return len(self.compartments[code]) / float(self.n)
+        return len(self.compartimentos[code]) / float(self.n)
 
 
     
