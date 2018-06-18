@@ -14,12 +14,15 @@ class Simulacion5(object):
         para ver de una forma visual la propagación del malware, en un caso
         con parametros obtenidos del caso 'Wannacry'."""
         tam = 10 ** 2
+        tiempo = 100
+        beta = 1
+        gamma = 0.01
         resultados = []
 
         """ Simulacion 1 """
         resultados.append(FuncionesNucleo().simulacionColores(ModeloXSIR,
                         "Scale_Free", tam_grafo=tam, susceptibles=tam*0.5,
-                        n_infectados=3, time=14, beta=0.8, gamma=0.007,
+                        n_infectados=3, time=tiempo, beta=beta, gamma=gamma,
                         runs=1))
 
 
