@@ -47,26 +47,31 @@ class FuncionesNucleo():
             grafo = grafo.clusters().giant()
         return grafo
 
-    def simulacion(self, modelo, tipo_grafo, tam_grafo=10000, infectados=1,
+    def simulacion(self, modelo, tipo_grafo, tam_grafo=10000, n_infectados=1,
                    susceptibles=10000, runs=10, time=100, *args, **kwds):
 
         results = []
+        aux = [] # variable para CdE
         # los susceptibles estan por defecto con 10000 para igualar
         # el tamanyo del grafo por defecto. Por tanto
         if susceptibles == 10000:
             susceptibles = tam_grafo
         for i in xrange(runs):
             current_run = []
+            aux2 = []
 
             ## Inicializamos grafo y modelo
             grafo = self.generaGrafo(tipo_grafo, n=tam_grafo)
             model = modelo(grafo, *args, **kwds)
 
             if susceptibles != tam_grafo:
-                s = random.sample(range(grafo.vcount()), susceptibles)
+                s = random.sample(range(grafo.vcount()), int(susceptibles%1))
                 model.compartimentos.move_vertices(s, "S")
+            else:
+                for v in grafo.vs:
+                    model.compartimentos.move_vertice(v.index, "S")
             ## Infectamos el numero de nodos indicado
-            infectados = random.sample(range(grafo.vcount()), infectados)
+            infectados = random.sample(range(grafo.vcount()), n_infectados)
             model.compartimentos.move_vertices(infectados, "I")
 
             ## realizamos los pasos
@@ -74,15 +79,19 @@ class FuncionesNucleo():
                 model.step()
                 p_infectados = model.compartimentos.tam_relativo("I")
                 current_run.append(p_infectados)
+                if t < 10:
+                    aux2.append(p_infectados)
 
             results.append(current_run)
-            return results
+            aux.append(aux2)
+        return results, aux
 
     def simulacionHub(self, modelo, tipo_grafo, tam_grafo=10000, num_infectados=1,
                       susceptibles=10000, runs=10, time=100, *args, **kwds):
         """ Simulacion"""
 
         results = []
+        aux = [] # variable para CdE
         # los susceptibles estan por defecto con 10000 para igualar
         # el tamanyo del grafo por defecto. Por tanto
         if susceptibles == 10000:
@@ -90,18 +99,22 @@ class FuncionesNucleo():
 
         for i in xrange(runs):
             current_run = []
+            aux2 = []
             n_infectados = num_infectados
-            print "Ronda %d" % i
 
             ## Inicializamos grafo y modelo
             grafo = self.generaGrafo(tipo_grafo, n=tam_grafo)
             model = modelo(grafo, *args, **kwds)
 
             if susceptibles != tam_grafo:
-                s = random.sample(range(grafo.vcount()), susceptibles)
+                s = random.sample(range(grafo.vcount()), int(susceptibles%1))
                 model.compartimentos.move_vertices(s, "S")
+            else:
+                for v in grafo.vs:
+                    model.compartimentos.move_vertice(v.index, "S")
 
-            ## Infectamos el numero de nodos indicado
+            # Infectamos el numero de nodos indicado de forma que sean
+            # los de mayor grado posible
             hubs = []
             infectados = []
 
@@ -113,15 +126,12 @@ class FuncionesNucleo():
                     infectados.append(hubs[0])
                 else:
                     if len(hubs) > n_infectados:
-                        print "[A]"
                         infectados = infectados + random.sample(hubs,
                                                                 n_infectados)
-                        print infectados
                     else:
                         infectados = infectados + random.sample(hubs, len(hubs))
                 n_infectados = n_infectados - len(hubs)
                 j += 1
-            print infectados
             model.compartimentos.move_vertices(infectados, "I")
 
             # realizamos los pasos
@@ -129,9 +139,13 @@ class FuncionesNucleo():
                 model.step()
                 p_infectados = model.compartimentos.tam_relativo("I")
                 current_run.append(p_infectados)
+                if t < 20:
+                    aux2.append(p_infectados)
+
 
             results.append(current_run)
-        return results
+            aux.append(aux2)
+        return results, aux
 
     def simulacionAntiHub(self, modelo, tipo_grafo, tam_grafo=10000,
                           n_infectados=1, susceptibles=10000, runs=10, time=100,
@@ -155,6 +169,9 @@ class FuncionesNucleo():
             if susceptibles != tam_grafo:
                 s = random.sample(range(grafo.vcount()), susceptibles)
                 model.compartimentos.move_vertices(s, "S")
+            else:
+                for v in grafo.vs:
+                    model.compartimentos.move_vertice(v.index, "S")
 
             ## Infectamos el numero de nodos indicado
             hubs = []
@@ -187,25 +204,28 @@ class FuncionesNucleo():
         return results
 
     def simulacionInteligente(self, modelo, tipo_grafo, tam_grafo=10000,
-                              infectados=1, susceptibles=10000, runs=10,
+                              n_infectados=1, susceptibles=10000, runs=10,
                               time=100, *args, **kwds):
         results = []
+        aux = []
         for i in xrange(runs):
             current_run = []
+            aux2 = []
 
             ## Inicializamos grafo y modelo
             grafo = self.generaGrafo(tipo_grafo, n=tam_grafo)
             model = modelo(grafo, *args, **kwds)
 
             if susceptibles != tam_grafo:
-                s = random.sample(range(grafo.vcount()), susceptibles)
+                s = random.sample(range(grafo.vcount()), int(susceptibles))
                 model.compartimentos.move_vertices(s, "S")
+            else:
+                for v in grafo.vs:
+                    model.compartimentos.move_vertice(v.index, "S")
             ## Infectamos el numero de nodos indicado
-            infectados = random.sample(range(grafo.vcount()), infectados)
+            infectados = random.sample(range(grafo.vcount()), n_infectados)
             for i in infectados:
-                # Comprobamos que son susceptibles
-                if model.compartimentos.get_state(i) == "S":
-                    model.compartimentos.move_vertice(i, "I")
+                model.compartimentos.move_vertice(i, "I")
 
             ## realizamos los pasos
             for t in xrange(time):
@@ -215,9 +235,12 @@ class FuncionesNucleo():
                     model.step()
                 p_infectados = model.compartimentos.tam_relativo("I")
                 current_run.append(p_infectados)
+                if t < 20:
+                    aux2.append(p_infectados)
 
             results.append(current_run)
-        return results
+            aux.append(aux2)
+        return results, aux
 
     def simulacionInteligente2(self, modelo, tipo_grafo, tam_grafo=10000,
                                n_infectados=1, susceptibles=10000, runs=10,
@@ -235,9 +258,10 @@ class FuncionesNucleo():
             if susceptibles != tam_grafo:
                 s = random.sample(range(grafo.vcount()), susceptibles)
                 model.compartimentos.move_vertices(s, "S")
+            else:
+                for v in grafo.vs:
+                    model.compartimentos.move_vertice(v.index, "S")
             ## Infectamos el numero de nodos indicado
-            print "Vertices grafo: %d" % grafo.vcount()
-            print "Infectados: %d" % n_infectados
             infectados = random.sample(range(grafo.vcount()), n_infectados)
             for i in infectados:
                 # Comprobamos que son susceptibles
@@ -270,42 +294,27 @@ class FuncionesNucleo():
             if susceptibles != tam_grafo:
                 s = random.sample(range(grafo.vcount()), int(susceptibles))
                 model.compartimentos.move_vertices(s, "S")
+            for id in model.compartimentos.compartimentos['S']:
+                grafo.vs[id]['color'] = 'green'
             ## Infectamos el numero de nodos indicado
             infectados = random.sample(range(grafo.vcount()), n_infectados)
             for i in infectados:
-                # Comprobamos que son susceptibles
-                if model.compartimentos.get_state(i) == "S":
-                    model.compartimentos.move_vertice(i, "I")
+                model.compartimentos.move_vertice(i, "I")
 
             ## Marcamos los pacientes cero en negro
             for id in model.compartimentos.compartimentos['I']:
                 grafo.vs[id]['color'] = 'black'
 
+            plot(grafo, "simulacion5_estadoinicial.png")
             ## realizamos los pasos
             for t in xrange(7):
                 model.step()
                 if (t % 2) == 0:
                     for id in model.compartimentos.compartimentos['X']:
-                        grafo.vs[id]['color'] = 'grey'
-                    for id in model.compartimentos.compartimentos['S']:
-                        grafo.vs[id]['color'] = 'yellow'
-                    for id in model.compartimentos.compartimentos['I']:
                         if grafo.vs[id]['color'] != 'black':
-                            grafo.vs[id]['color'] = 'red'
-                    for id in model.compartimentos.compartimentos['R']:
-                        grafo.vs[id]['color'] = 'green'
-                    fichero = "simulacion5_" + "%d" % t + ".png"
-                    plot(grafo, fichero)
-
-            model.beta = 0.7
-            model.gamma = 0.5
-
-            ## realizamos los pasos
-            for t in xrange(8,15):
-                model.step()
-                if (t % 2) == 0:
-                    for id in model.compartimentos.compartimentos['X']:
-                        grafo.vs[id]['color'] = 'grey'
+                            grafo.vs[id]['color'] = 'grey'
+                        else:
+                            grafo.vs[id]['color'] = 'cyan'
                     for id in model.compartimentos.compartimentos['S']:
                         grafo.vs[id]['color'] = 'yellow'
                     for id in model.compartimentos.compartimentos['I']:
@@ -316,7 +325,27 @@ class FuncionesNucleo():
                     fichero = "Figuras/simulacion5_" + "%d" % t + ".png"
                     plot(grafo, fichero)
 
+            model.beta = 0.7
+            model.gamma = 0.5
 
+            ## realizamos los pasos
+            for t in xrange(7,15):
+                model.step()
+                if (t % 2) == 0:
+                    for id in model.compartimentos.compartimentos['X']:
+                        if grafo.vs[id]['color'] != 'black':
+                            grafo.vs[id]['color'] = 'grey'
+                        else:
+                            grafo.vs[id]['color'] = 'cyan'
+                    for id in model.compartimentos.compartimentos['S']:
+                        grafo.vs[id]['color'] = 'yellow'
+                    for id in model.compartimentos.compartimentos['I']:
+                        if grafo.vs[id]['color'] != 'black':
+                            grafo.vs[id]['color'] = 'red'
+                    for id in model.compartimentos.compartimentos['R']:
+                        grafo.vs[id]['color'] = 'green'
+                    fichero = "Figuras/simulacion5_" + "%d" % t + ".png"
+                    plot(grafo, fichero)
 
         return results
 
@@ -327,12 +356,14 @@ class FuncionesNucleo():
         infectados sean vecinos. """
 
         results = []
+        aux = []
         # los susceptibles estan por defecto con 10000 para igualar
         # el tamanyo del grafo por defecto. Por tanto
         if susceptibles == 10000:
             susceptibles = tam_grafo
-        for i in xrange(runs):
+        for i in xrange(runs-1):
             current_run = []
+            aux2 = []
 
             # Inicializamos grafo y modelo
             grafo = self.generaGrafo(tipo_grafo, n=tam_grafo)
@@ -343,20 +374,31 @@ class FuncionesNucleo():
                 model.compartimentos.move_vertices(s, "S")
 
             # Infectamos el numero de nodos indicado
-            infectados = random.random(range(grafo.vcount()))
-            for i in infectados:
-                # Comprobamos que son susceptibles
-                if model.compartimentos.get_state(i) == "S":
-                    model.compartimentos.move_vertice(i, "I")
+            infectados = []
+            paciente_cero = random.sample(range(grafo.vcount()), 1)[0]
+            infectados.append(paciente_cero)
+            n_infectados2 = n_infectados -1
+            while n_infectados2 > 0:
+                neis = grafo.neighbors(paciente_cero)
+                for nei in neis:
+                    if n_infectados2 > 0:
+                        infectados.append(nei)
+                        n_infectados2 -= 1
+
+            model.compartimentos.move_vertices(infectados, "I")
 
             ## realizamos los pasos
             for t in xrange(time):
                 model.step()
                 p_infectados = model.compartimentos.tam_relativo("I")
                 current_run.append(p_infectados)
+                if t < 20:
+                    aux2.append(p_infectados)
 
             results.append(current_run)
-            return results
+            aux.append(aux2)
+        return results, aux
+
 
     def plot_results(self, results, color):
         for r in results:

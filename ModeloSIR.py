@@ -34,9 +34,6 @@ class ModeloSIR(ModeloCompartimental):
 
         ## Algunos se recuperan
         i_to_r = muestraAleatoria(self.compartimentos["I"], self.gamma)
-        print self.compartimentos["I"]
-        print "i_to_r"
-        print i_to_r
         self.compartimentos.move_vertices(i_to_r, "R")
 
     def stepInteligente(self):
@@ -46,14 +43,14 @@ class ModeloSIR(ModeloCompartimental):
         s_to_i = set()  # Inicializamos un conjunto para los traspasos
 
         ## Grado medio del grafo
-        g_medio = mean(self.grafo.degree()) // 1
+        g_alto = mean(self.grafo.degree()) * 1.8 // 1
 
         ## Calculamos para cada vertice infectado
         ## Cuales de sus vecinos seran infectados
         for v in self.compartimentos["I"]:
             neis = self.grafo.neighbors(v)
             s_to_i.update([nodo for nodo in neis if
-                           self.grafo.vs[nodo].degree() > g_medio])
+                           self.grafo.vs[nodo].degree() > g_alto])
             ## Aplicamos los cambios
         self.compartimentos.move_vertices(s_to_i, "I")
 
@@ -62,20 +59,20 @@ class ModeloSIR(ModeloCompartimental):
         self.compartimentos.move_vertices(i_to_r, "R")
 
     def stepInteligente2(self, beta):
-        """ Un paso del modelo SIS en el que solo ataca nodos
+        """ Un paso del modelo SIR en el que solo ataca nodos
         con un grado superior a la media."""
         ## Se extiende la infeccion
         s_to_i = set()  # Inicializamos un conjunto para los traspasos
 
         ## Grado medio del grafo
-        g_medio = mean(self.grafo.degree()) // 1
+        g_alto = mean(self.grafo.degree()) * 1.8 // 1
 
         ## Calculamos para cada vertice infectado
         ## Cuales de sus vecinos seran infectados
         for v in self.compartimentos["I"]:
             neis = self.grafo.neighbors(v)
             s_to_i.update([nodo for nodo in neis if
-                           ((self.grafo.vs[nodo].degree() < g_medio) and
+                           ((self.grafo.vs[nodo].degree() < g_alto) and
                             (random.random() < beta))])
             ## Aplicamos los cambios
         self.compartimentos.move_vertices(s_to_i, "I")

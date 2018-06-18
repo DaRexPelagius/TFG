@@ -35,9 +35,6 @@ class ModeloXSIR(ModeloCompartimental):
 
         ## Algunos se recuperan
         i_to_r = muestraAleatoria(self.compartimentos["I"], self.gamma)
-        print self.compartimentos["I"]
-        print "i_to_r"
-        print i_to_r
         self.compartimentos.move_vertices(i_to_r, "R")
 
     def stepInteligente(self):
@@ -46,15 +43,32 @@ class ModeloXSIR(ModeloCompartimental):
         ## Se extiende la infeccion
         s_to_i = set()  # Inicializamos un conjunto para los traspasos
 
-        ## Grado medio del grafo
-        g_medio = mean(self.grafo.degree()) // 1
-
+        # Percentil 90 de la dist del grado
+        # de los nodos
+        g_alto = mean(self.grafo.degree())  // 1
         ## Calculamos para cada vertice infectado
         ## Cuales de sus vecinos seran infectados
         for v in self.compartimentos["I"]:
             neis = self.grafo.neighbors(v)
-            s_to_i.update([nodo for nodo in neis if
-                           self.grafo.vs[nodo].degree() > g_medio])
+            for nodo in neis:
+                aux = []
+                if (self.grafo.vs[
+                    nodo].degree() > g_alto and self.compartimentos.get_state(
+                        nodo) == 'S'):
+                    aux.append(nodo)
+            s_to_i.update(aux)
+            # Ahora calculamos los infectados por el proceso
+            # normal
+            aux = []
+            for nei in muestraAleatoria(neis, self.beta):
+                if self.compartimentos.get_state(nei) == "S":
+                    aux.append(nei)
+            s_to_i.update(aux)
+
+
+            # s_to_i.update([nodo for nodo in neis if
+            #                self.grafo.vs[nodo].degree() > g_alto
+            #               and self.compartimentos.get_state(nodo) == 'S'])
             ## Aplicamos los cambios
         self.compartimentos.move_vertices(s_to_i, "I")
 
