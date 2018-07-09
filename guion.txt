@@ -1,0 +1,100 @@
+%%%%%%%%%%%%%% Portada %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Buenas tardes, me llamo José Luis y he realizado un trabajo de fin de grado  sobre la propagación de malware en redes de computadores, en particular, en redes análogas a Internet. 
+
+En este trabajo conté con la tutela de Francisco de Borja al que le agradezco que haya hecho tan fácil trabajar con él.
+
+%%%%%%%%%%%%%% Índice %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Este trabajo surge ante la cantidad de noticias sobre el impacto del malware en la sociedad y, en particular, de dos ataques sucedidos durante el verano de 2017, WannaCry y NotPetya.
+
+Algunos datos interesantes sobre el impacto del malware y la motivación de este proyecto se tratarán en el primer apartado de la presentación.
+
+Después se resumirá el estado actual de las tecnologías, las investigaciones en este campo y las herramientas y nociones matemáticas existentes que se necesitaron aplicar durante la realizacion del trabajo.
+
+Una vez mostrados los conocimientos usados durante este proyecto, explicaré cómo se definieron los requisitos que tenía que cumplir la herramienta de simulación, así cómo el desarrollo de la misma.
+
+Finalmente repasaré algunos resultados obtenidos mediante la simulación con la herramienta diseñada, y algunos puntos y cuestiones posibles para continuar la línea de trabajo de este TFG.
+
+%%% TIEMPO HASTA AQUI:  1'14''/1'08''
+
+%%%%%%%%%%%%% MOTIVACION %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+En 2017, los ataques de malware afectaron a más de la mitad de la población de EEUU. El malware o software malicioso, es el término común para un amplio abanico de software como los troyanos, spyware, gusanos, adware, ransomware y otros virus.
+% Fuente: https://www.huffingtonpost.com/entry/malware-attacks-reaching-epidemic-proportions_us_5a53e0f4e4b0ee59d41c0d2e
+
+Estos terminos aunque distintos, muchas veces se solapan, y un software malicioso puede ser a la vez un gusano y un ransomware. Esto se debe a que son clasificaciones de acuerdo a distintas características. Más adelante en la presentación, enumeraré algunos de los términos más comunes para clasificar malware.
+
+Según el último índice de Impacto Global de Amenaza de ThreatCloud Intelligence, casi una de cada dos organizaciones en todo el mundo estaban, en febrero de 2018, afectadas por criptojackers. Este tipo de virus utiliza los recursos del ordenador infectado para minar criptomonedas.
+%% Fuente:https://cybersecuritynews.es/top-3-malware-en-espana-los-criptojackers-aumentan-su-actividad/
+
+Cómo vemos, casi todas las personas y organizaciones sufrimos de alguna u otra forma el malware. Particularmente mediática resultó la epidemia causada por el ransomware WannaCry en Mayo de 2017. Este malware afectó a diversas empresas y organizaciones gubernamentales nacionales e internacionales, logrando gran notoriedad.
+
+Los ransomware son un tipo de software malicioso cuyo fin es encriptar los datos del dispositivo infectado y exigir al usuario del mismo, un rescato en criptomonedas a cambio de la clave para desencriptar sus archivos.
+
+A WannaCry lo sucedieron una amplia variedad de ransomwares, entre los que también se encuentran los notorios Petya y NotPetya, así como modificaciones del WannaCry; que indicaban quizás el inicio de una era del ransomware.
+
+%%% TIEMPO HASTA AQUI:  X/2'42''
+
+%%%%%%%%%%%%DATOS SOBRE EL RANSOMWARE EN 2017  %%%%%%%%%%%%%%%%%%%%%%%%
+
+Como iba diciendo, WannaCry fue un caso que logró bastante relevancia mediática. Diversas organizaciones gubernamentales y empresas fueron víctimas de este malware que se diseño utilizando herramientas filtradas de la Agencia Nacional de Seguridad de EEUU.
+
+En particular, el exploit utilizado fue EternalBlue. Este exploit fue filtrado el 14 de Abril de 2017 por el grupo de hackers Shadow Brokers. Se aprovechaba de una vulnerabilidad en la implementación del protocolo SMB de Windows. 
+
+Esta misma vulnerabilidad fue la usada por NotPetya después de WannaCry, y se ha reportado que fue usada como parte del troyano bancacio Retefe. 
+
+Se cifra en torno a 200.000 los dispositivos infectados por WannaCry durante su epidemia, y algunas de las organizaciones afectadas fueron:
+	- El ministerio del interior de Rusia
+	- El Servicio Nacional de Salud de Inglaterra
+	- Empresas como Renault o Telefónica
+	- Y algunos gobiernos autonomicos de India entre otros
+
+Además de las grandes epidemias que provocaron estos dos virus, esto se podía preveer durante el principio del año 2017. Como podemos ver en esta gráfica del informe del primer cuatrimestre de MalwareBytes sobre amenazas de ciberseguridad, los ransomware eran los software maliciosos más utilizados. En este mismo informe, se aprecía un aumento del 430% de tipos de ransomware. 
+
+Esto se debe a que los elementos necesarios para la implementación de estos malware, son cada vez mas accesibles, pudiendo ser utilizados por adolescentes aficionados al scripting hasta grupos ilegales de hackers o hackers apoyados por estados.
+
+Mientras estaba haciendo este trabajo, explore la posibilidad de implementar mi propio ransomware, incluse encontre varios códigos que prové en maquinas virtuales aisladas, no consideré necesario realizarlo al no poder integrarlo en la herramienta de simulación ni ser necesario. 
+
+%%%% TIEMPO HASTA AQUI:  X/5'05''
+
+
+
+
+
+
+
+
+
+
+El mayor proveedor mundial especializado en ciberseguridad, ha revelado que, según su último Índice de Impacto Global de Amenaza, los criptojackers afectaron al 42% de las organizaciones en todo el mundo durante febrero de 2018. Los investigadores de Check Point han descubierto tres variantes diferentes de criptojacking en su informe de febrero entre el Top 10 de las variantes de malware más frecuentes del mes.
+
+
+
+In 2017, malware attacks affected over half of the adult population of the United States. Let’s be clear about what we mean by malware. Malware is an umbrella term. It stands for a variety of malicious software, including Trojans, spyware, worms, adware, ransomware, and viruses. 
+%% Fuente:https://www.huffingtonpost.com/entry/malware-attacks-reaching-epidemic-proportions_us_5a53e0f4e4b0ee59d41c0d2e
+
+
+It was CryptoLocker, which burst onto the scene in 2013, that really opened the age of ransomware on a grand scale. CryptoLocker spread via attachments to spam messages, and used RSA public key encryption to seal up user files, demanding cash in return for the decryption keys. Jonathan Penn, Director of Strategy at Avast, notes that at its height in late 2013 and early 2014, over 500,000 machines were infected by CryptoLocker.
+
+TeslaCrypt
+
+Within a year, though, a new threat arose. Originally claiming to be one of those CryptoLocker variants, this ransomware soon had a new name — TeslaCrypt — and a clever M.O.: it targeted ancillary files associated with video games — saved games, maps, downloadable content, and the like. These files are at once precious to hardcore gamers but also more likely to be stored locally rather than in the cloud or backed up on an external drive. By 2016, TeslaCrypt made up 48 percent of ransomware attacks.
+
+SimpleLocker
+
+As more and more valuable files migrate to mobile devices, so too are the ransomware scammers. Android was the platform of choice to attack, and in late 2015 and early 2016, ransomware Android infections spiked almost fourfold. Many were so-called "blocker" attacks that merely made it difficult to access files by preventing users from getting at parts of the UI, but in late 2015 a particularly aggressive ransomware called SimpleLocker began to spread, which was the first Android-based attack to actually encrypt files and make them inaccessible without the scammers' help. SimpleLocker was also the first known ransomware that delivered its malicious payload via a trojan downloader, which made it more difficult for security measures to catch up to. While SimpleLocker was born in Eastern Europe, three-quarters of its victims are in the United States, as scammers chase the money.
+
+about 150,000 as of late 2016, which is a vanishingly small percentage of Android users.
+
+WannaCry
+
+CryptoLocker marked the beginning of an era where ransomware was more than just a curiosity. But in mid-2017, two major and intertwined ransomware attacks spread like wildfire across the globe, shutting down hospitals in Ukraine and radio stations in California, and that was when ransomware became an existential threat.
+
+The first of the two major attacks was called WannaCry, and "was easily the worst ransomware attack in history," says Avast's Penn. "On May 12th, the ransomware started taking hold in Europe. Just four days later, Avast had detected more than 250,000 detections in 116 countries." (That really puts 150,000 Android infections over more than a year into perspective.) 
+
+NotPetya
+https://www.csoonline.com/article/3212260/ransomware/the-5-biggest-ransomware-attacks-of-the-last-5-years.html
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Contando el estado del arte %%%%%%%%%%%%%%%%%%%%%%%%%%
+
