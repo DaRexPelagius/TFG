@@ -16,7 +16,7 @@ Una vez mostrados los conocimientos usados durante este proyecto, explicaré có
 
 Finalmente repasaré algunos resultados obtenidos mediante la simulación con la herramienta diseñada, y algunos puntos y cuestiones posibles para continuar la línea de trabajo de este TFG.
 
-%%% TIEMPO HASTA AQUI:  1'14''	1'08''
+%%% TIEMPO HASTA AQUI:  1'14''	1'08''	1'11
 
 %%%%%%%%%%%%% MOTIVACION %%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -34,7 +34,7 @@ Los ransomware son un tipo de software malicioso cuyo fin es encriptar los datos
 
 A WannaCry lo sucedieron una amplia variedad de ransomwares, entre los que también se encuentran los notorios Petya y NotPetya, así como modificaciones del WannaCry; que indicaban quizás el inicio de una era del ransomware.
 
-%%% TIEMPO HASTA AQUI:  X	2'42''
+%%% TIEMPO HASTA AQUI:  X	2'42''	2'48
 
 %%%%%%%%%%%%DATOS SOBRE EL RANSOMWARE EN 2017  %%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -42,7 +42,7 @@ Como iba diciendo, WannaCry fue un caso que logró bastante relevancia mediátic
 
 En particular, el exploit utilizado fue EternalBlue. Este exploit fue filtrado el 14 de Abril de 2017 por el grupo de hackers Shadow Brokers. Se aprovechaba de una vulnerabilidad en la implementación del protocolo SMB de Windows. 
 
-Esta misma vulnerabilidad fue la usada por NotPetya después de WannaCry, y se ha reportado que fue usada como parte del troyano bancacio Retefe. 
+Esta misma vulnerabilidad fue la usada por NotPetya después de WannaCry, y se ha reportado que fue usada como parte del troyano bancario Retefe. 
 
 Se cifra en torno a 200.000 los dispositivos infectados por WannaCry durante su epidemia, y algunas de las organizaciones afectadas fueron:
 	- El ministerio del interior de Rusia
@@ -56,7 +56,7 @@ Esto se debe a que los elementos necesarios para la implementación de estos mal
 
 Mientras estaba haciendo este trabajo, explore la posibilidad de implementar mi propio ransomware, incluse encontre varios códigos que prové en maquinas virtuales aisladas, no consideré necesario realizarlo al no poder integrarlo en la herramienta de simulación ni ser necesario. 
 
-%%%% TIEMPO HASTA AQUI:  X	5'05''
+%%%% TIEMPO HASTA AQUI:  X	5'05''	4'39''
 
 %%%%%%%%%%%%%%%%%%%%%% Malware %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 En mi trabajo de fin de grado, si hay un protagonista es el malware. Puede que la epidemiología en otros temas como videos virales o memes en redes sociales sea de cierto interés, pero este trabajo estudia la epidemia de algo nocivo. Es por esto, que consideré que lo primero que debía era buscar información sobre que era exactamente el malware.
@@ -81,7 +81,7 @@ Los gusanos, son programas maliciosos capaces de propagarse y replicarse por si 
 Decidi estudiar este tipo de malware, pues es en el que la topologia de internet afecta mas en su propagación y cuya propagación más se asemeja a una epidemia.
 
 
-%%%% TIEMPO HASTA AQUI:  X	X
+%%%% TIEMPO HASTA AQUI:  X	X	7'02
 %%%%%%%%%%%%%%%%%%%%%%Epidemiología de redes%%%%%%%%%%%%%%%%%%%%%%
 Una epidemia es un mal o daño que se expande de forma intensa e indiscriminada, es decir, es un fenómeno real que se puede observar.
 
@@ -99,7 +99,7 @@ Estos modelos dividen a la población en distintos grupos o compartimentos, por 
 	-SEIR Susceptible Expuesto Infectado Recuperado, que añade un compartimento mas para aquellos ya infectados pero que aun no son contagiosos.
 	-Y durante la realización del trabajo, en particular, en el momento en que realizaba simulaciones. Consideré interesante declarar otro modelo, que aunque posiblemente exista como habia superado ya la fase de investigación no pude contrastar esto, que llame XSIR, donde existe otro compartimento para los individuos que pertencen a la red pero son ajenos a la epidemia.
 
-%%%% TIEMPO HASTA AQUI:  X	X
+%%%% TIEMPO HASTA AQUI:  X	X	9'05
 %%%%%%%%%%%%%%%%%%%%%%Topologia de redes complejas%%%%%%%%%%%%%%%%%%%%%%
 Consideré este modelo importante, trás haber leido varios articulos y libros sobre la representación de Internet como un grafo.
 
@@ -111,8 +111,100 @@ Aunque es cierto que Internet cumple estas propiedades, el modelo dejaba algunos
 
 En estas redes, la funcion de distribución de los nodos según su grado, seguía una ley potencial. Esto explicaba la existencia de hubs. Ademas, el modelo de Barabasi se diferenciaba del de Watts, que mientras que Watts entendía estas redes como una red estatica, Barabasi defendia que estas redes estan en continuo crecimiento.
 
-%%%% TIEMPO HASTA AQUI:  X	X
-%%%%%%%%%%%%%%%%%%%%%%Topologia de redes complejas%%%%%%%%%%%%%%%%%%%%%%
+%%%% TIEMPO HASTA AQUI:  X	X 	10'22
+%%%%%%%%%%%%%%%%Requisitos de la herramienta de simulacion%%%%%%%%%%%%%%%%%%%%%
+Una vez que recopile suficiente información sobre el tema, definí los requisitos que debia cumplir la herramienta de simulacion. Estos requisitos son:
+- La capacidad de creación y manejo de grandes grafos. Aunque sabía que era imposible crear un grafo del tamaño de Internet y más con las prestaciones de mi ordenador, necesitaba que mi herramienta soportase grafos de al menos 100,000 nodos.
+- Además estos nodos debían ser identificables de alguna manera y tenían que soportar el uso de un modelo compartimetnal por encima del nivel de red.
+- Con la red y el modelo compartimental subyancetes, se debía ejecutar una epidemia, donde con el paso de cad aunidad de tiempo, los nodos cambiasen de compartimento de forma aleatoria de acuerdo con las funciones de transicion.
+- Finalmente, debia permitirme obtener datos interesantes de las simulaciones y representarlos en graficas.
+
+
+%%%% TIEMPO HASTA AQUI:  X	X 	X 	
+%%%%%%%%%%%%%%%%%%%% Herramientas existentes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+La creacion desde cero de una herramienta con estas funcionalidades, era una tarea que se escapaba al alcance de este trabajo. Por esto, empece a buscar que herramientas existian actualmente para el manejo de grafos.
+
+A pesar de haber encontrado mas, las que mas llamaron mi atencion fueron Graph-tool, NetworkX e igraph.
+
+Cualquiera de las librerias serviría para la implementación de la herramienta, pero mientras recopilaba información, di con el borrador de un libro de los desarrolladores de iGraph en el que presentan una implementacion de los modelos compartimentales.
+
+Esto fue razon suficiente para decantarme con iGraph, y aunque iGraph este tambien implementado tanto en C como en R, decidi utilizar la libreria de Python al ser este el lenguaje con el que me encontraba trabajando en el momento. 
+
+A partir de una primera versión del código que se encontraba en el libro, desarrollé la herramienta aumentando su funcionalidad según se me ocurrían nuevos experimentos y necesidades.
+
+
+%%%% TIEMPO HASTA AQUI:  X	X 	X 	
+%%%%%%%%%%%%%%%%%%%% Tam Red vs Infectdos%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+La primera pregunta que se me presentó fue qué relación existía entre el tamaño de una red y el alcance de una epidemia.
+
+Como no tenia la posibilidad de hacer las simulaciones sobre una red, necesitaba que esta prueba me mostrase una similitud en la tendencia a pesar de los distintos tamaños.
+
+Estas gráficas representan la media de los datos obtenidos en 10 simulaciones para cada uno de los distintos tamaños. Aunque el tamaño de la red influye en la proporción máxima de infectados en una epidemia y este punto se alcanza ligeramente antes, podemos ver que si las distintas graficas comparten una tendencia simular que nos permite interpolar los resultados siguientes a Internet.
+
+
+%%%% TIEMPO HASTA AQUI:  X	X 	X 	
+%%%%%%%%%%%%%%%%%%%% Paciente Cero: Hub%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Una de las particularidades de Internet es la existencia de Hubs. Estos nodos tienen conexion con un altisimo numero de nodos, por lo que sería intuitivo pensar que una epidemia que empezase en uno de estos nodos sería más grave que una aleatoria.
+
+Para esto, volvimos a realizar 10 simulaciones en dos situaciones distintas. En la primera, la epidemia comienza en el nodo de mayor grado del grafo; mientras que la otra comienza de forma aleatoria.
+
+Cómo vemos en la gráfica, si que es importante a la hora de determinar el tiempo que tarda en alcanzar su punto máximo, sin embargo; este punto es practicamente el mismo en ambos casos.
+
+Puede parecer que no es importnte el tiempo que tarda en alcanzar el punto, pero hay que pensar que durante una epidemia hay numerosos equipos de profesionales intentando parchear las vulnerabilidades o fallos existentes, por lo que un gusano rápido tiene mayor probabilidad de alcanzar su punto crítico antes del lanzamiento del parche que otro más lento.
+
+
+%%%% TIEMPO HASTA AQUI:  X	X 	X 	
+%%%%%%%%%%%%%%%%%%%% Gamma vs Beta%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+A la hora de definir las funciones de transiciones entre los distintos estados
+del modelo comprtimental, existen dos parametros decisivos. Uno se suele denominar Beta, e indica la tasa de contagio de los infectados a los susceptibles. El otro, gamma, indica la tasa de recuperación de los infectados.
+
+La pregunta lógica qué me surgió es, ¿como varía una epidemia con la misma tasa de contagio para distintas tasas de recuperación?
+
+Para resolver esta duda, realice otra vez series de 10 simulaciones, con los mismos parametros salvo el gamma, que variaba de 0 a beta en intervalos iguales.
+
+Podemos ver que entre la simulación con gamma = 0.01 y la simulacion con gamma = 0.015, existe un gran salto en la cantidad de infectados. Esto es debido a las ecuaciones diferenciales que representan las poblaciones en los modelos compartimentales y que se trata en el apartado del documento correspondiente al estado del arte.
+
+%%%% TIEMPO HASTA AQUI:  X	X 	X 	
+%%%%%%%%%%%%%%%%%Simulacion de caso real%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Aunque en el documento del trabajo, existen otras simulaciones, la ultima que queria mostrar en la presentación esta inspirada en un caso real. Como he mencionado, a la hora de decidir hacer este trabajo, fue crucial la epidemia de WannaCry del año pasado. Por eso recopile ciertos datos sobre esta epidemia.
+
+El primer ataque de WannaCry fue reportado el 12 de Mayo de 2017. Esta epidemia tuvo su principal target en los usuarios de Windows7 llegando a ser el 98% de los dispositivos infectados, usuarios de este SO. En Mayo de ese año, la cuota de mercado de W7 correspondía al 50% de los ordenadores de la red de redes.
+
+Trás una semana, el 18 de Mayo, se lanzó el parche que reparaba al vulnerabilidad del protocolo SMB y empezó la recuperación de la epidemia. Hasta ese momento, solo el 0,07% de los infectados habían pagado el rescate, de ahi el gamma de 0,0007 en los primeros 7 dias. Después, asumimos que las actualizaciones de Windows no se despliegan todas a la vez, pues Microsoft suele actuar de forma gradual; y aún cuando un usuario es apto para actualizar su SO, a veces no lo hace por diversos motivos. Por esto, supondremos un gamma de 0,5 en la segunda semana de epidemia.
+
+Como se intuye de esto, la simulacion que realice, consta de 14 unidades de tiempo que representan los 7 primeros días antes del parche, y los 7 siguientes.
+
+También consideré necesario, utilizar el modelo compartimental XSIR, mencionado previamente, puesto que hay dispositivos en la red, que son ajenos a la epidemia por no contar con la vulnerabilidad. Sin embargo, estos nodos son de interes, pues pueden actuar como cortafuegos a otros nodos que si son susceptibles, o aislar vecindarios enteros.
+
+
+%%%% TIEMPO HASTA AQUI:  X	X 	X 	
+%%%%%%%%%%%%%%%%%Simulacion de caso real 2%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Finalmente, tome una instantanea del grafo en distintos momentos de la epidemia. Estos momentos corresponden, al dia 1, al dia antes del lanzamiento del parche, al dia despues del lanzamineto del parche y al ultimo dia de la simulacion.
+
+Hay que mencionar, que la herramienta cambia la distribucion del grafo cada vez que lo representa. La capacidad de fijar el grafo, seria una funcionalidad de la herramienta a desarrollar en el trabajo futuro. Para visualizarlo de una forma más sencilla, se han coloreado de negro los pacientes cero, en este caso 3.
+
+Como se puede observar, la epidemia de la simulación corresponde con la realidad en su virulencia. En tan solo 7 unidades de tiempo, la infección afecta a la mayoría de la población de susceptibles, y trás el parche la recuperación es asombrosamente rápida también.
+
+
+%%%% TIEMPO HASTA AQUI:  X	X 	X 	
+%%%%%%%%%%%%%%%%%Trabajo Futuro%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+En cuanto a trabajo futuro en linea con este TFG. Se debería empezar con la refactorizacion del código para simplificar la edición del mismo. Por motivos de tiempo algunas funciones muy similares las desglosé en varias y pueden complicar la legibilidad del código.
+
+También sería interesante ampliar la herramienta con una interfaz gráfica que permitiese realizar simulaciones de forma sencilla.
+
+Algunas de las simulaciones que no se pudieron hacer y resultaban interesantes son:
+-¿Como afecta que una red sepa defender sus hubs?
+-¿Como afecta que los primeros infectados esten juntos o dispersos?
+-Mas simulaciones inferidas de casos reales.
+
+
+%%%% TIEMPO HASTA AQUI:  X	X 	X 	
+%%%%%%%%%%%%%%%%%% FIN %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Muchas gracias por su tiempo, y si tienen alguna pregunta, estaré encantado de responderlas.
+
+
+
+
 
 
 
