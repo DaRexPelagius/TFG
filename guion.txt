@@ -16,7 +16,7 @@ Una vez mostrados los conocimientos usados durante este proyecto, explicaré có
 
 Finalmente repasaré algunos resultados obtenidos mediante la simulación con la herramienta diseñada, y algunos puntos y cuestiones posibles para continuar la línea de trabajo de este TFG.
 
-%%% TIEMPO HASTA AQUI:  1'14''/1'08''
+%%% TIEMPO HASTA AQUI:  1'14''	1'08''
 
 %%%%%%%%%%%%% MOTIVACION %%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -34,7 +34,7 @@ Los ransomware son un tipo de software malicioso cuyo fin es encriptar los datos
 
 A WannaCry lo sucedieron una amplia variedad de ransomwares, entre los que también se encuentran los notorios Petya y NotPetya, así como modificaciones del WannaCry; que indicaban quizás el inicio de una era del ransomware.
 
-%%% TIEMPO HASTA AQUI:  X/2'42''
+%%% TIEMPO HASTA AQUI:  X	2'42''
 
 %%%%%%%%%%%%DATOS SOBRE EL RANSOMWARE EN 2017  %%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -56,11 +56,33 @@ Esto se debe a que los elementos necesarios para la implementación de estos mal
 
 Mientras estaba haciendo este trabajo, explore la posibilidad de implementar mi propio ransomware, incluse encontre varios códigos que prové en maquinas virtuales aisladas, no consideré necesario realizarlo al no poder integrarlo en la herramienta de simulación ni ser necesario. 
 
-%%%% TIEMPO HASTA AQUI:  X/5'05''
+%%%% TIEMPO HASTA AQUI:  X	5'05''
+
+%%%%%%%%%%%%%%%%%%%%%% Malware %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+En mi trabajo de fin de grado, si hay un protagonista es el malware. Puede que la epidemiología en otros temas como videos virales o memes en redes sociales sea de cierto interés, pero este trabajo estudia la epidemia de algo nocivo. Es por esto, que consideré que lo primero que debía era buscar información sobre que era exactamente el malware.
+
+Esta es una definición valida del malware: "Un programa que, introducido en un sistema, normalmente camuflado, con la intención de comprometer la confidencialidad, integridad o disponibilidad de los datos de la víctima, aplicaciones o sistema operativo, o con el proósito de molestar o perturbar a la víctima."
+
+Sin embargo, esta definición es muy amplia y esto es por qué el término malware abarca un amplio espectro de software maliciosos. Surge de esta vaga definición, la necesidad de clasificar el malware en distintos tipos.
+
+Existen numerosas clasificaciones que atienden a distintas caracteristicas, algunas de las posibles caracteristicas a valorar son:
+	- La capacidad de auto-replicacion y auto-propagación. Es decir, el malware es capaz de crear una replica de sí mismo y con ella infectar a otro dispositivo.
+	- El crecimiento de la población. Esta caracteristica depende de la anterior, pues solo se aplica a los programas capaces de autopropagarse. En mi trabajo esta caracteristica es crucial para estudiar las epidemias.
+	- Autosuficiencia, es decir, un programa no necesita de códigos o servicios ajenos a si mismo, o es un parásito en caso contrario.
+
+Atendiendo a estas caracteristicas y la funcion del propio malware surgen terminos como:
+	- Adware. Malware parasito que crea publicidad indeseada.
+	- Spyware. Codigo, normalmente, autosuficiente que recolecta informacion sensible del dispositivo infectado.
+	- Troyano. Programa que normalmente se camufla en otro programa inofensivo y permite sortear controles de seguridad en el programa infectado.
+	- Y los gusanos. Los gusanos son el tipo de malware del que trata este trabajo.
+
+Los gusanos, son programas maliciosos capaces de propagarse y replicarse por si mismos, con un crecimiento de población disinto dependiendo del gusano en cuestión y que no suele necesitar de otros programas. Este tipo de malware, es el utilizado muchas veces en ataques no dirigidos, y muchos de los ransomware actuales suelen ir encapsulados en gusanos como es el caso de Wannacry.
+
+Decidi estudiar este tipo de malware, pues es en el que la topologia de internet afecta mas en su propagación y cuya propagación más se asemeja a una epidemia.
 
 
-
-
+%%%% TIEMPO HASTA AQUI:  X	X
+%%%%%%%%%%%%%%%%%%%%%%Epidemiología de redes%%%%%%%%%%%%%%%%%%%%%%
 
 
 
