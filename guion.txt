@@ -83,40 +83,38 @@ Decidi estudiar este tipo de malware, pues es en el que la topologia de internet
 
 %%%% TIEMPO HASTA AQUI:  X	X
 %%%%%%%%%%%%%%%%%%%%%%Epidemiología de redes%%%%%%%%%%%%%%%%%%%%%%
+Una epidemia es un mal o daño que se expande de forma intensa e indiscriminada, es decir, es un fenómeno real que se puede observar.
+
+Existe una disciplina dentro de las matemáticas llamada modelización de especial interes a la hora de estudiar una epidemia. Esta disciplina busca predecir comportamientos de fenomenos reales mediante su abstración y la teorización sobre esta abstración.
+
+Este proceso, lo tenemos resumido en esta figura. Primero existe un fenomeno real, que queremos estudiar, mediante la abstración creamos un modelo matemático que lo represente.  Sobre este modelo teorizamos y obtenemos conclusiones matematicas, que luego interpretamos para obtener predicciones. Estas predicciones se contrastan con la realidad, y una vez que los datos concuerden tenemos un modelo matematico valido.
+
+En el caso de las epidemias, biologicas o de malware, esto nos permite predecir datos tan importantes como la velocidad de propagacion o el alcance de una epidemia.
+
+Dentro de la modelización, existe una rama denominada epidemiología. En esta rama, destacan en particular los modelos compartimentales. 
+
+Estos modelos dividen a la población en distintos grupos o compartimentos, por los que los individuos pueden pasar a lo largo de la epidemia. Estos modelos se definen por los distintos compartimentos existentes y las transiciones entre ellos como:
+	-SIS Susceptible Infectdo Susceptible, donde un inviduo es susceptible de infeccion o esta infectado, y nunca puede ser inmune haya o no pasado la infeccion.
+	-SIR Susceptible Infectado Recuperado, donde el individuo tras superar la infeccion es inmune.
+	-SEIR Susceptible Expuesto Infectado Recuperado, que añade un compartimento mas para aquellos ya infectados pero que aun no son contagiosos.
+	-Y durante la realización del trabajo, en particular, en el momento en que realizaba simulaciones. Consideré interesante declarar otro modelo, que aunque posiblemente exista como habia superado ya la fase de investigación no pude contrastar esto, que llame XSIR, donde existe otro compartimento para los individuos que pertencen a la red pero son ajenos a la epidemia.
+
+%%%% TIEMPO HASTA AQUI:  X	X
+%%%%%%%%%%%%%%%%%%%%%%Topologia de redes complejas%%%%%%%%%%%%%%%%%%%%%%
+Consideré este modelo importante, trás haber leido varios articulos y libros sobre la representación de Internet como un grafo.
+
+En 1XXX, D.J. Watts, propuso un modelo de red compleja que representaba a Internet. Hasta entonces, Internet había sido tratada como tantas otras redes complejas, como un grafo aleatorio siguiendo el modelo de Erdos-Renyi. 
+
+Este modelo de Watts, definia un tipo de redes que tenian una media de camino mas corto baja, aun incluso para redes con un numero alto de nodos, y un alto coeficiente de clusterizacion o agrupamiento, es decir, cualquier nodo estaba comunicado en pocos pasos con cualquier otro nodo de la red, y la red se dividia en comunidades de nodos interconectados.
+
+Aunque es cierto que Internet cumple estas propiedades, el modelo dejaba algunos detalles significantes como la existencia de nodos de alto grado de conectividad, tambien conocidos como hubs, sin explicación. Años más tardes, Albert Laslo Barabasi presenta un nuevo modelo de redes complejas, las redes libres de escala o scale free.
+
+En estas redes, la funcion de distribución de los nodos según su grado, seguía una ley potencial. Esto explicaba la existencia de hubs. Ademas, el modelo de Barabasi se diferenciaba del de Watts, que mientras que Watts entendía estas redes como una red estatica, Barabasi defendia que estas redes estan en continuo crecimiento.
+
+%%%% TIEMPO HASTA AQUI:  X	X
+%%%%%%%%%%%%%%%%%%%%%%Topologia de redes complejas%%%%%%%%%%%%%%%%%%%%%%
 
 
 
 
-
-
-El mayor proveedor mundial especializado en ciberseguridad, ha revelado que, según su último Índice de Impacto Global de Amenaza, los criptojackers afectaron al 42% de las organizaciones en todo el mundo durante febrero de 2018. Los investigadores de Check Point han descubierto tres variantes diferentes de criptojacking en su informe de febrero entre el Top 10 de las variantes de malware más frecuentes del mes.
-
-
-
-In 2017, malware attacks affected over half of the adult population of the United States. Let’s be clear about what we mean by malware. Malware is an umbrella term. It stands for a variety of malicious software, including Trojans, spyware, worms, adware, ransomware, and viruses. 
-%% Fuente:https://www.huffingtonpost.com/entry/malware-attacks-reaching-epidemic-proportions_us_5a53e0f4e4b0ee59d41c0d2e
-
-
-It was CryptoLocker, which burst onto the scene in 2013, that really opened the age of ransomware on a grand scale. CryptoLocker spread via attachments to spam messages, and used RSA public key encryption to seal up user files, demanding cash in return for the decryption keys. Jonathan Penn, Director of Strategy at Avast, notes that at its height in late 2013 and early 2014, over 500,000 machines were infected by CryptoLocker.
-
-TeslaCrypt
-
-Within a year, though, a new threat arose. Originally claiming to be one of those CryptoLocker variants, this ransomware soon had a new name — TeslaCrypt — and a clever M.O.: it targeted ancillary files associated with video games — saved games, maps, downloadable content, and the like. These files are at once precious to hardcore gamers but also more likely to be stored locally rather than in the cloud or backed up on an external drive. By 2016, TeslaCrypt made up 48 percent of ransomware attacks.
-
-SimpleLocker
-
-As more and more valuable files migrate to mobile devices, so too are the ransomware scammers. Android was the platform of choice to attack, and in late 2015 and early 2016, ransomware Android infections spiked almost fourfold. Many were so-called "blocker" attacks that merely made it difficult to access files by preventing users from getting at parts of the UI, but in late 2015 a particularly aggressive ransomware called SimpleLocker began to spread, which was the first Android-based attack to actually encrypt files and make them inaccessible without the scammers' help. SimpleLocker was also the first known ransomware that delivered its malicious payload via a trojan downloader, which made it more difficult for security measures to catch up to. While SimpleLocker was born in Eastern Europe, three-quarters of its victims are in the United States, as scammers chase the money.
-
-about 150,000 as of late 2016, which is a vanishingly small percentage of Android users.
-
-WannaCry
-
-CryptoLocker marked the beginning of an era where ransomware was more than just a curiosity. But in mid-2017, two major and intertwined ransomware attacks spread like wildfire across the globe, shutting down hospitals in Ukraine and radio stations in California, and that was when ransomware became an existential threat.
-
-The first of the two major attacks was called WannaCry, and "was easily the worst ransomware attack in history," says Avast's Penn. "On May 12th, the ransomware started taking hold in Europe. Just four days later, Avast had detected more than 250,000 detections in 116 countries." (That really puts 150,000 Android infections over more than a year into perspective.) 
-
-NotPetya
-https://www.csoonline.com/article/3212260/ransomware/the-5-biggest-ransomware-attacks-of-the-last-5-years.html
-
-%%%%%%%%%%%%%%%%%%%%%%%%%% Contando el estado del arte %%%%%%%%%%%%%%%%%%%%%%%%%%
 
